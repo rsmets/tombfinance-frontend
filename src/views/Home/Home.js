@@ -145,11 +145,11 @@ const Home = () => {
         <Grid item xs={12} sm={8}>
           <Paper>
             <Box p={4}>
-              <h2>Welcome to Tomb Finance</h2>
+              <h2>Welcome to Vinyl Finance</h2>
               <p>The first algorithmic stablecoin on Fantom Opera, pegged to the price of 1 FTM via seigniorage.</p>
               <p>
-                Stake your TOMB-FTM LP in the Cemetery to earn TSHARE rewards.
-                Then stake your earned TSHARE in the Masonry to earn more TOMB!
+                Stake your VINYL-FTM LP in the Club to earn VSHARE rewards.
+                Then stake your earned VSHARE in the Studio to earn more VINYL!
               </p>
             </Box>
           </Paper>
@@ -185,7 +185,7 @@ const Home = () => {
               <Button color="primary" href="/masonry" variant="contained" style={{ marginRight: '10px' }}>
                 Stake Now
               </Button>
-              <Button href="/cemetery" variant="contained" style={{ marginRight: '10px' }}>
+              <Button href="/club" variant="contained" style={{ marginRight: '10px' }}>
                 Farm Now
               </Button>
               <Button

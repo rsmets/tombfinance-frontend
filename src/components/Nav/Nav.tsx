@@ -104,11 +104,11 @@ const Nav = () => {
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
-              <Link color="textPrimary" to="/cemetery" className={classes.link}>
-                Cemetery
+              <Link color="textPrimary" to="/club" className={classes.link}>
+                Club
               </Link>
               <Link color="textPrimary" to="/masonry" className={classes.link}>
-                Masonry
+                Studio
               </Link>
               <Link color="textPrimary" to="/pit" className={classes.link}>
                 Pit
