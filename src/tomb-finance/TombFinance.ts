@@ -31,7 +31,9 @@ export class TombFinance {
   TOMB: ERC20;
   VINYL: ERC20;
   TSHARE: ERC20;
+  TRACKS: ERC20;
   TBOND: ERC20;
+  FANS: ERC20
   FTM: ERC20;
 
   constructor(cfg: Configuration) {
@@ -47,8 +49,10 @@ export class TombFinance {
     for (const [symbol, [address, decimal]] of Object.entries(externalTokens)) {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal);
     }
-    this.TOMB = new ERC20(deployments.tomb.address, provider, 'TOMB');
     this.VINYL = new ERC20(deployments.tomb.address, provider, 'VINYL');
+    this.TRACKS = new ERC20(deployments.tShare.address, provider, 'TRACKS');
+    this.FANS = new ERC20(deployments.tBond.address, provider, 'FANS');
+    this.TOMB = new ERC20(deployments.tomb.address, provider, 'TOMB');    
     this.TSHARE = new ERC20(deployments.tShare.address, provider, 'TSHARE');
     this.TBOND = new ERC20(deployments.tBond.address, provider, 'TBOND');
     this.FTM = this.externalTokens['WFTM'];
@@ -727,7 +731,12 @@ export class TombFinance {
       if (assetName === 'VINYL') {
         asset = this.VINYL;
         assetUrl = 'https://www.iconspng.com/uploads/vinyl/vinyl.png';
-        // assetUrl = 'https://tomb.finance/presskit/tomb_icon_noBG.png';
+      } else if (assetName === 'TRACKS') {
+        asset = this.TRACKS;
+        assetUrl = 'https://www.iconspng.com/uploads/shiny-vinyl.png';
+      } else if (assetName === 'FANS') {
+        asset = this.FANS;
+        assetUrl = 'https://www.iconspng.com/uploads/vinyl-blue/vinyl-blue.png';
       } else if (assetName === 'TOMB') {
         asset = this.TOMB;
         assetUrl = 'https://tomb.finance/presskit/tomb_icon_noBG.png';

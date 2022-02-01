@@ -252,7 +252,7 @@ const Home = () => {
               <h2>TRACKS</h2>
               <Button
                 onClick={() => {
-                  tombFinance.watchAssetInMetamask('TSHARE');
+                  tombFinance.watchAssetInMetamask('TRACKS');
                 }}
                 color="primary"
                 variant="outlined"
@@ -289,7 +289,7 @@ const Home = () => {
               <h2>FANS</h2>
               <Button
                 onClick={() => {
-                  tombFinance.watchAssetInMetamask('TBOND');
+                  tombFinance.watchAssetInMetamask('FANS');
                 }}
                 color="primary"
                 variant="outlined"
