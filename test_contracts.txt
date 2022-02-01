@@ -1,0 +1,10 @@
+Contracts:
+
+TEST NET
+masonary deployed to: 0x002bC051feB715B95219222C93b1bAe819D1fCBf
+oracle deployed to: 0x2ccca048D60ca0B3e33bE8884BC5937dC2Ea86f5
+tBond deployed to: 0xf99b7AC6CbD8FD40437814A921B4c97623273cab
+tomb deployed to: 0x36A0f98b2d187d3BF0B66fF6fBCfeF0ABa6291EE
+treasury deployed to: 0x39658eF1Aa4a30AB182C6e4eAD063eC7e302956C
+rebateTreasury deployed to: 0xe9c386BE19389834528E456e4731480b5D9d0C20
+tshare deployed to: 0x778Fd5F5e614c1b18e86bBA68d60f630f9FAd735

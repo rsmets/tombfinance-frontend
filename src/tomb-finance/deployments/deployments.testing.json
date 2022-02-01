@@ -1,6 +1,6 @@
 {
   "BondOracle": {
-    "address": "0xE4EFD87ad34360932E5325D77A0a6e39147DEbFa",
+    "address": "0xe9c386BE19389834528E456e4731480b5D9d0C20",
     "abi": [
       {
         "inputs": [
@@ -457,7 +457,7 @@
     ]
   },
   "SeigniorageOracle": {
-    "address": "0xf3471c818b1b632A1F8865B748c3A9f475bf9E21",
+    "address": "0x2ccca048D60ca0B3e33bE8884BC5937dC2Ea86f5",
     "abi": [
       {
         "inputs": [
@@ -862,7 +862,7 @@
     ]
   },
   "tomb": {
-    "address": "0x9b7F7E44904Bb61a9710685c938eA5f867Cb36b2",
+    "address": "0x36A0f98b2d187d3BF0B66fF6fBCfeF0ABa6291EE",
     "abi": [
       {
         "inputs": [
@@ -1754,7 +1754,7 @@
     ]
   },
   "tShare": {
-    "address": "0x8F5Ba67C2C9613A3C1A9Eae62eEde11515110C96",
+    "address": "0x778Fd5F5e614c1b18e86bBA68d60f630f9FAd735",
     "abi": [
       {
         "inputs": [
@@ -2432,7 +2432,7 @@
     ]
   },
   "tBond": {
-    "address": "0xEDcB2c0A53EC888635F159BcB6D7741f6386D232",
+    "address": "0xf99b7AC6CbD8FD40437814A921B4c97623273cab",
     "abi": [
       {
         "inputs": [],
@@ -2877,7 +2877,7 @@
     ]
   },
   "Treasury": {
-    "address": "0xFcED424Cc6836137b51aC7a4Ce80Aa46Ef7C8EA1",
+    "address": "0x39658eF1Aa4a30AB182C6e4eAD063eC7e302956C",
     "abi": [
       {
         "anonymous": false,
@@ -4016,7 +4016,7 @@
     ]
   },
   "Masonry": {
-    "address": "0x2A1AcA8221267016d01502240c912e1491Ef4802",
+    "address": "0x002bC051feB715B95219222C93b1bAe819D1fCBf",
     "abi": [
       {
         "anonymous": false,
