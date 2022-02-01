@@ -112,9 +112,9 @@ const Nav = () => {
                 Studio
               </Link>
               <Link color="textPrimary" to="/pit" className={classes.link}>
-                Pit
+                Radio
               </Link>
-              <Link color="textPrimary" to="/sbs" className={classes.link}>
+              {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS
               </Link>
               <Link color="textPrimary" to="/liquidity" className={classes.link}>
@@ -122,7 +122,7 @@ const Nav = () => {
               </Link>
               <Link color="textPrimary" to="/regulations" className={classes.link}>
                 Regulations
-              </Link>
+              </Link> */}
               <a href="https://docs.tomb.finance" className={classes.link}>
                 Docs
               </a>
