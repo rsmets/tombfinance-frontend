@@ -148,8 +148,8 @@ const Home = () => {
               <h2>Welcome to Vinyl Finance</h2>
               <p>The grooviest algorithmic stablecoin on Fantom Opera, pegged to the price of 1 FTM via seigniorage.</p>
               <p>
-                Stake your VINYL-FTM LP in the Club to earn VSHARE rewards.
-                Then stake your earned VSHARE in the Studio to earn more VINYL!
+                Stake your VINYL-FTM LP in the Club to earn TRACKS rewards.
+                Then stake your earned TRACKS in the Studio to earn more VINYL!
               </p>
             </Box>
           </Paper>
