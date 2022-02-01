@@ -18,6 +18,7 @@ import shibaLogo from '../../assets/img/shiba_logo.svg';
 const logosBySymbol: { [title: string]: string } = {
   //Real tokens
   //=====================
+  // RJS: add tokens here with new assests if want to not use tomb's anymore
   TOMB: tombLogo,
   TOMBPNG: tombLogoPNG,
   TSHAREPNG: tShareLogoPNG,
