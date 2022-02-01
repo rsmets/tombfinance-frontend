@@ -49,7 +49,8 @@ const App: React.FC = () => {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/club">
+            {/* <Route path="/club"> */}
+            <Route path="/cemetery">
               <Cemetery />
             </Route>
             <Route path="/masonry">

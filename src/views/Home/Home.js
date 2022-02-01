@@ -185,7 +185,8 @@ const Home = () => {
               <Button color="primary" href="/masonry" variant="contained" style={{ marginRight: '10px' }}>
                 Stake Now
               </Button>
-              <Button href="/club" variant="contained" style={{ marginRight: '10px' }}>
+              {/* <Button href="/club" variant="contained" style={{ marginRight: '10px' }}> */}
+              <Button href="/cemetery" variant="contained" style={{ marginRight: '10px' }}>
                 Farm Now
               </Button>
               <Button
