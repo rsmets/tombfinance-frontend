@@ -29,6 +29,7 @@ export class TombFinance {
 
   TOMBWFTM_LP: Contract;
   TOMB: ERC20;
+  VINYL: ERC20;
   TSHARE: ERC20;
   TBOND: ERC20;
   FTM: ERC20;
@@ -47,6 +48,7 @@ export class TombFinance {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal);
     }
     this.TOMB = new ERC20(deployments.tomb.address, provider, 'TOMB');
+    this.VINYL = new ERC20(deployments.tomb.address, provider, 'VINYL');
     this.TSHARE = new ERC20(deployments.tShare.address, provider, 'TSHARE');
     this.TBOND = new ERC20(deployments.tBond.address, provider, 'TBOND');
     this.FTM = this.externalTokens['WFTM'];
@@ -722,7 +724,11 @@ export class TombFinance {
     if (ethereum && ethereum.networkVersion === config.chainId.toString()) {
       let asset;
       let assetUrl;
-      if (assetName === 'TOMB') {
+      if (assetName === 'VINYL') {
+        asset = this.VINYL;
+        assetUrl = 'https://www.iconspng.com/uploads/vinyl/vinyl.png';
+        // assetUrl = 'https://tomb.finance/presskit/tomb_icon_noBG.png';
+      } else if (assetName === 'TOMB') {
         asset = this.TOMB;
         assetUrl = 'https://tomb.finance/presskit/tomb_icon_noBG.png';
       } else if (assetName === 'TSHARE') {
