@@ -4568,7 +4568,7 @@
     ]
   },
   "TombFtmRewardPool": {
-    "address": "0xFb392431c0dd8d7f21315aA63bA60C6Bd10A0fcd",
+    "address": "0x8a4Eb59f44f7F19ae696a9fb5d1C4e67D3D18db2",
     "abi": [
       {
         "inputs": [
@@ -5054,7 +5054,7 @@
     ]
   },
   "TombBooGenesisRewardPool": {
-    "address": "0xFb392431c0dd8d7f21315aA63bA60C6Bd10A0fcd",
+    "address": "0x3BCFE30444e0De85B5DE6bB3f071F1b62937A9aa",
     "abi": [
       {
         "inputs": [
@@ -5540,7 +5540,7 @@
     ]
   },
   "TombZooGenesisRewardPool": {
-    "address": "0xFb392431c0dd8d7f21315aA63bA60C6Bd10A0fcd",
+    "address": "0x3BCFE30444e0De85B5DE6bB3f071F1b62937A9aa",
     "abi": [
       {
         "inputs": [
@@ -6026,7 +6026,7 @@
     ]
   },
   "TombShibaGenesisRewardPool": {
-    "address": "0xFb392431c0dd8d7f21315aA63bA60C6Bd10A0fcd",
+    "address": "0x8a4Eb59f44f7F19ae696a9fb5d1C4e67D3D18db2",
     "abi": [
       {
         "inputs": [
@@ -6512,7 +6512,7 @@
     ]
   },
   "TombFtmLpTombRewardPool": {
-    "address": "0x96Ddab71d6074f09267A653FE9490ea16D20e20f",
+    "address": "0x8a4Eb59f44f7F19ae696a9fb5d1C4e67D3D18db2",
     "abi": [
       {
         "inputs": [
@@ -7980,7 +7980,7 @@
     ]
   },
   "TshareFtmLPTShareRewardPool": {
-    "address": "0xE9A9242b5aBd050ec714EDfF53ff08dfA066aaf0",
+    "address": "0xE6b3D390dB1d0796D7E4fE88476920ae66A06793",
     "abi": [
       {
         "inputs": [

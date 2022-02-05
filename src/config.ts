@@ -20,9 +20,9 @@ const configurations: { [env: string]: Configuration } = {
       'TOMB-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
       'TSHARE-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
     },
-    baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
-    bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
-    masonryLaunchesAt: new Date('2020-12-11T00:00:00Z'),
+    baseLaunchDate: new Date('2022-02-02 13:00:00Z'),
+    bondLaunchesAt: new Date('2022-02-03T15:00:00Z'),
+    masonryLaunchesAt: new Date('2022-02-03T00:00:00Z'),
     refreshInterval: 10000,
   },
   production: {
@@ -72,7 +72,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 1,
-    closedForStaking: true,
+    closedForStaking: false,
   },
   TombBooRewardPool: {
     name: 'Earn VINYL by BOO',
@@ -83,7 +83,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 2,
-    closedForStaking: true,
+    closedForStaking: false,
   },
   TombShibaRewardPool: {
     name: 'Earn VINYL by SHIBA',
@@ -94,7 +94,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 3,
-    closedForStaking: true,
+    closedForStaking: false,
   },
   TombZooRewardPool: {
     name: 'Earn VINYL by ZOO',
