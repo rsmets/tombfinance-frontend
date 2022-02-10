@@ -286,10 +286,10 @@ const Home = () => {
         <Grid item xs={12} sm={4}>
           <Card>
             <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>FANS</h2>
+              <h2>CD</h2>
               <Button
                 onClick={() => {
-                  tombFinance.watchAssetInMetamask('FANS');
+                  tombFinance.watchAssetInMetamask('CD');
                 }}
                 color="primary"
                 variant="outlined"

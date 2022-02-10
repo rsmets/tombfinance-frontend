@@ -33,7 +33,7 @@ export class TombFinance {
   TSHARE: ERC20;
   TRACKS: ERC20;
   TBOND: ERC20;
-  FANS: ERC20
+  CD: ERC20
   FTM: ERC20;
 
   constructor(cfg: Configuration) {
@@ -51,7 +51,7 @@ export class TombFinance {
     }
     this.VINYL = new ERC20(deployments.tomb.address, provider, 'VINYL');
     this.TRACKS = new ERC20(deployments.tShare.address, provider, 'TRACKS');
-    this.FANS = new ERC20(deployments.tBond.address, provider, 'FANS');
+    this.CD = new ERC20(deployments.tBond.address, provider, 'CD');
     this.TOMB = new ERC20(deployments.tomb.address, provider, 'TOMB');    
     this.TSHARE = new ERC20(deployments.tShare.address, provider, 'TSHARE');
     this.TBOND = new ERC20(deployments.tBond.address, provider, 'TBOND');
@@ -734,8 +734,8 @@ export class TombFinance {
       } else if (assetName === 'TRACKS') {
         asset = this.TRACKS;
         assetUrl = 'https://www.iconspng.com/uploads/shiny-vinyl.png';
-      } else if (assetName === 'FANS') {
-        asset = this.FANS;
+      } else if (assetName === 'CD') {
+        asset = this.CD;
         assetUrl = 'https://www.iconspng.com/uploads/vinyl-blue/vinyl-blue.png';
       } else if (assetName === 'TOMB') {
         asset = this.TOMB;

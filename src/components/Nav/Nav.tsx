@@ -112,7 +112,7 @@ const Nav = () => {
                 Studio
               </Link>
               <Link color="textPrimary" to="/pit" className={classes.link}>
-                Radio
+                Shop
               </Link>
               {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS

@@ -64,7 +64,7 @@ const Pit: React.FC = () => {
         {!!account ? (
           <>
             <Route exact path={path}>
-              <PageHeader icon={'🏦'} title="Buy & Redeem FANS, aka Bonds" subtitle="Earn premiums upon redemption" />
+              <PageHeader icon={'🏦'} title="Buy & Redeem CDs, aka Bonds" subtitle="Earn premiums upon redemption" />
             </Route>
             <StyledBond>
               <StyledCardWrapper>
@@ -73,11 +73,11 @@ const Pit: React.FC = () => {
                   fromToken={tombFinance.TOMB}
                   fromTokenName="VINYL"
                   toToken={tombFinance.TBOND}
-                  toTokenName="FANS"
+                  toTokenName="CD"
                   priceDesc={
                     !isBondPurchasable
                       ? 'VINYL is over peg'
-                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' FANS available for purchase'
+                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' CD available for purchase'
                   }
                   onExchange={handleBuyBonds}
                   disabled={!bondStat || isBondRedeemable}
@@ -91,7 +91,7 @@ const Pit: React.FC = () => {
                 />
                 <Spacer size="md" />
                 <ExchangeStat
-                  tokenName="FANS"
+                  tokenName="CD"
                   description="Current Price: (VINYL)^2"
                   price={Number(bondStat?.tokenInFtm).toFixed(2) || '-'}
                 />
@@ -100,10 +100,10 @@ const Pit: React.FC = () => {
                 <ExchangeCard
                   action="Redeem"
                   fromToken={tombFinance.TBOND}
-                  fromTokenName="FANS"
+                  fromTokenName="CD"
                   toToken={tombFinance.TOMB}
                   toTokenName="VINYL"
-                  priceDesc={`${getDisplayBalance(bondBalance)} FANS Available in wallet`}
+                  priceDesc={`${getDisplayBalance(bondBalance)} CD Available in wallet`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || !isBondRedeemable}
                   disabledDescription={!isBondRedeemable ? `Enabled when VINYL > ${BOND_REDEEM_PRICE}FTM` : null}
