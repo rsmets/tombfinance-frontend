@@ -23,7 +23,7 @@ export class TombFinance {
   provider: ethers.providers.Web3Provider;
   signer?: ethers.Signer;
   config: Configuration;
-  contracts: { [name: string]: Contract };
+  contracts: { [name: string]: Contract }; // populated via the deployments/<env>.json files
   externalTokens: { [name: string]: ERC20 };
   masonryVersionOfUser?: string;
 
@@ -58,7 +58,7 @@ export class TombFinance {
     this.FTM = this.externalTokens['WFTM'];
 
     // Uniswap V2 Pair
-    this.TOMBWFTM_LP = new Contract(externalTokens['TOMB-FTM-LP'][0], IUniswapV2PairABI, provider);
+    this.TOMBWFTM_LP = new Contract(externalTokens['VINYL-FTM-LP'][0], IUniswapV2PairABI, provider);
 
     this.config = cfg;
     this.provider = provider;

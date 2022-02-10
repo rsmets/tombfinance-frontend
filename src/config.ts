@@ -8,7 +8,7 @@ const configurations: { [env: string]: Configuration } = {
     chainId: 1337,
     networkName: 'Local Hardhat Node',
     ftmscanUrl: 'https://testnet.ftmscan.com',
-    defaultProvider: 'https://rpc.testnet.fantom.network/', // TODO: figure out how to host a local RPC
+    defaultProvider: 'http://127.0.0.1:8545/', // TODO: figure out how to host a local RPC
     deployments: require('./tomb-finance/deployments/deployments.local.json'),
     externalTokens: {
       WFTM: ['0xf1277d1ed8ad466beddf92ef448a132661956621', 18],
@@ -17,6 +17,8 @@ const configurations: { [env: string]: Configuration } = {
       ZOO: ['0x2317610e609674e53D9039aaB85D8cAd8485A7c5', 0],
       SHIBA: ['0x39523112753956d19A3d6a30E758bd9FF7a8F3C0', 9],
       'USDT-FTM-LP': ['0xE7e3461C2C03c18301F66Abc9dA1F385f45047bA', 18],
+      'VINYL-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
+      'TRACKS-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
       'TOMB-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
       'TSHARE-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
     },
@@ -38,6 +40,8 @@ const configurations: { [env: string]: Configuration } = {
       ZOO: ['0x2317610e609674e53D9039aaB85D8cAd8485A7c5', 0],
       SHIBA: ['0x39523112753956d19A3d6a30E758bd9FF7a8F3C0', 9],
       'USDT-FTM-LP': ['0xE7e3461C2C03c18301F66Abc9dA1F385f45047bA', 18],
+      'VINYL-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
+      'TRACKS-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
       'TOMB-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
       'TSHARE-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
     },
@@ -59,6 +63,8 @@ const configurations: { [env: string]: Configuration } = {
       ZOO: ['0x09e145a1d53c0045f41aeef25d8ff982ae74dd56', 0],
       SHIBA: ['0x9ba3e4f84a34df4e08c112e1a0ff148b81655615', 9],
       'USDT-FTM-LP': ['0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c', 18],
+      'VINYL-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
+      'TRACKS-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
       'TOMB-FTM-LP': ['0x2A651563C9d3Af67aE0388a5c8F89b867038089e', 18],
       'TSHARE-FTM-LP': ['0x4733bc45eF91cF7CcEcaeeDb794727075fB209F2', 18],
     },
@@ -174,5 +180,5 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
 };
 
-export default configurations[process.env.NODE_ENV || 'development'];
-// export default configurations[process.env.NODE_ENV || 'local'];
+// export default configurations[process.env.NODE_ENV || 'development'];
+export default configurations[process.env.NODE_ENV || 'local'];
