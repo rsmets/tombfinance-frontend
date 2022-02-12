@@ -180,5 +180,5 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
 };
 
-// export default configurations[process.env.NODE_ENV || 'development'];
-export default configurations[process.env.NODE_ENV || 'local'];
+export default configurations[process.env.NODE_ENV || 'development'];
+// export default configurations[process.env.NODE_ENV || 'local'];
