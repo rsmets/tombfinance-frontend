@@ -162,7 +162,7 @@ const Home = () => {
     <Grid item  xs={12} sm={12} justify="center"  style={{ margin: '12px', display: 'flex' }}>
             <Alert variant="filled" severity="warning">
               <b>
-      Please visit our <StyledLink target="_blank" href="https://docs.tomb.finance">documentation</StyledLink> before purchasing VINYL or TRACKS!</b>
+      Please visit our <StyledLink target="_blank" href="https://docs.vinyl.finance">documentation</StyledLink> before purchasing VINYL or TRACKS!</b>
             </Alert>
         </Grid>
         </Grid>
