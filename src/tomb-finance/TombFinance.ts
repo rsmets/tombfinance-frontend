@@ -52,9 +52,9 @@ export class TombFinance {
     this.VINYL = new ERC20(deployments.tomb.address, provider, 'VINYL');
     this.TRACKS = new ERC20(deployments.tShare.address, provider, 'TRACKS');
     this.CD = new ERC20(deployments.tBond.address, provider, 'CD');
-    this.TOMB = new ERC20(deployments.tomb.address, provider, 'TOMB');    
-    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'TSHARE');
-    this.TBOND = new ERC20(deployments.tBond.address, provider, 'TBOND');
+    this.TOMB = new ERC20(deployments.tomb.address, provider, 'VINYL');    
+    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'TRACKS');
+    this.TBOND = new ERC20(deployments.tBond.address, provider, 'CD');
     this.FTM = this.externalTokens['WFTM'];
 
     // Uniswap V2 Pair
@@ -730,22 +730,32 @@ export class TombFinance {
       let assetUrl;
       if (assetName === 'VINYL') {
         asset = this.VINYL;
-        assetUrl = 'https://www.iconspng.com/uploads/vinyl/vinyl.png';
+        // assetUrl = 'https://www.iconspng.com/images/vinyl/vinyl.jpg';
+        assetUrl = 'https://i.ibb.co/DWKfmJh/vinyl.png'; // https://ibb.co/ZXTzvj5
       } else if (assetName === 'TRACKS') {
         asset = this.TRACKS;
-        assetUrl = 'https://www.iconspng.com/uploads/shiny-vinyl.png';
+        // assetUrl = 'https://www.iconspng.com/images/shiny-vinyl.jpg';
+        assetUrl = 'https://i.ibb.co/3drTgfN/shiny-vinyl.png';
       } else if (assetName === 'CD') {
         asset = this.CD;
-        assetUrl = 'https://www.iconspng.com/uploads/vinyl-blue/vinyl-blue.png';
+        // assetUrl = 'https://www.iconspng.com/uploads/vinyl-blue/vinyl-blue.png';
+        // assetUrl = 'https://freesvg.org/img/dvd-004.png'
+        assetUrl = 'https://i.ibb.co/wJr93pz/dvd-004.png'; // https://ibb.co/k36RkqS
       } else if (assetName === 'TOMB') {
         asset = this.TOMB;
-        assetUrl = 'https://tomb.finance/presskit/tomb_icon_noBG.png';
+        // assetUrl = 'https://tomb.finance/presskit/tomb_icon_noBG.png';
+        // assetUrl = 'https://www.iconspng.com/images/vinyl/vinyl.jpg';
+        assetUrl = 'https://i.ibb.co/DWKfmJh/vinyl.png'; // https://ibb.co/ZXTzvj5
       } else if (assetName === 'TSHARE') {
         asset = this.TSHARE;
-        assetUrl = 'https://tomb.finance/presskit/tshare_icon_noBG.png';
+        // assetUrl = 'https://tomb.finance/presskit/tshare_icon_noBG.png';
+        // assetUrl = 'https://www.iconspng.com/images/shiny-vinyl.jpg';
+        assetUrl = 'https://i.ibb.co/3drTgfN/shiny-vinyl.png';
       } else if (assetName === 'TBOND') {
         asset = this.TBOND;
-        assetUrl = 'https://tomb.finance/presskit/tbond_icon_noBG.png';
+        // assetUrl = 'https://tomb.finance/presskit/tbond_icon_noBG.png';
+        // assetUrl = 'https://freesvg.org/img/dvd-004.png'
+        assetUrl = 'https://i.ibb.co/wJr93pz/dvd-004.png'; // https://ibb.co/k36RkqS
       }
       await ethereum.request({
         method: 'wallet_watchAsset',
