@@ -45,8 +45,8 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   const TVL = useTotalValueLocked();
-  const tombFtmLpStats = useLpStats('TOMB-FTM-LP');
-  const tShareFtmLpStats = useLpStats('TSHARE-FTM-LP');
+  const tombFtmLpStats = useLpStats('VINYL-FTM-LP');
+  const tShareFtmLpStats = useLpStats('TRACKS-FTM-LP');
   const tombStats = useTombStats();
   const tShareStats = usetShareStats();
   const tBondStats = useBondStats();
@@ -100,8 +100,10 @@ const Home = () => {
   );
   const tBondTotalSupply = useMemo(() => (tBondStats ? String(tBondStats.totalSupply) : null), [tBondStats]);
 
-  const tombLpZap = useZap({ depositTokenName: 'TOMB-FTM-LP' });
-  const tshareLpZap = useZap({ depositTokenName: 'TSHARE-FTM-LP' });
+  // const tombLpZap = useZap({ depositTokenName: 'TOMB-FTM-LP' });
+  // const tshareLpZap = useZap({ depositTokenName: 'TSHARE-FTM-LP' });
+  const tombLpZap = useZap({ depositTokenName: 'VINYL-FTM-LP' });
+  const tshareLpZap = useZap({ depositTokenName: 'TRACKS-FTM-LP' });
 
   const StyledLink = styled.a`
     font-weight: 700;
@@ -116,7 +118,8 @@ const Home = () => {
         tombLpZap.onZap(zappingToken, tokenName, amount);
         onDissmissTombZap();
       }}
-      tokenName={'TOMB-FTM-LP'}
+      // tokenName={'TOMB-FTM-LP'}
+      tokenName={'VINYL-FTM-LP'}
     />,
   );
 
@@ -128,7 +131,8 @@ const Home = () => {
         tshareLpZap.onZap(zappingToken, tokenName, amount);
         onDissmissTshareZap();
       }}
-      tokenName={'TSHARE-FTM-LP'}
+      // tokenName={'TSHARE-FTM-LP'}
+      tokenName={'TRACKS-FTM-LP'}
     />,
   );
 
@@ -352,7 +356,8 @@ const Home = () => {
               <h2>TRACKS-FTM Spooky LP</h2>
               <Box mt={2}>
                 <CardIcon>
-                  <TokenSymbol symbol="TSHARE-FTM-LP" />
+                  {/* <TokenSymbol symbol="TSHARE-FTM-LP" /> */}
+                  <TokenSymbol symbol="VINYL-FTM-LP" />
                 </CardIcon>
               </Box>
               <Box mt={2}>

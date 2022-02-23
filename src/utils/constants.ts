@@ -1,5 +1,5 @@
-export const TOMB_TICKER = 'TOMB';
-export const TSHARE_TICKER = 'TSHARE';
+export const TOMB_TICKER = 'VINYL';
+export const TSHARE_TICKER = 'TRACKS';
 export const TBOND_TICKER = 'TBOND';
 export const FTM_TICKER = 'FTM';
 export const WFTM_TICKER = 'WFTM';

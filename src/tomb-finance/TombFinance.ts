@@ -318,10 +318,10 @@ export class TombFinance {
     if (tokenName === 'WFTM') {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
-      if (tokenName === 'TOMB-FTM-LP') {
-        tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true);
-      } else if (tokenName === 'TSHARE-FTM-LP') {
-        tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false);
+      if (tokenName === 'VINYL-FTM-LP') {
+        tokenPrice = await this.getLPTokenPrice(token, this.VINYL, true);
+      } else if (tokenName === 'TRACKS-FTM-LP') {
+        tokenPrice = await this.getLPTokenPrice(token, this.TRACKS, false);
       } else if (tokenName === 'SHIBA') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);
       } else {
