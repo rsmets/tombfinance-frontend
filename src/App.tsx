@@ -88,8 +88,8 @@ const Providers: React.FC = ({ children }) => {
             walletconnect: { rpcUrl: config.defaultProvider },
             walletlink: {
               url: config.defaultProvider,
-              appName: 'Tomb Finance',
-              appLogoUrl: 'https://github.com/tombfinance/tombfinance-assets/blob/master/logo_tomb_NoBG.png',
+              appName: 'Vinyl Finance',
+              appLogoUrl: 'https://i.ibb.co/DWKfmJh/vinyl.png',
             },
           }}
         >

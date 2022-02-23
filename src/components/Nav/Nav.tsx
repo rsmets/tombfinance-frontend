@@ -141,7 +141,7 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              Tomb Finance
+              Vinyl Finance
             </Typography>
 
             <Drawer
@@ -163,12 +163,12 @@ const Nav = () => {
               <Divider />
               <List>
                 <ListItemLink primary="Home" to="/" />
-                <ListItemLink primary="Cemetery" to="/cemetery" />
-                <ListItemLink primary="Masonry" to="/masonry" />
-                <ListItemLink primary="Pit" to="/pit" />
-                <ListItemLink primary="SBS" to="/sbs" />
+                <ListItemLink primary="Club" to="/cemetery" />
+                <ListItemLink primary="Studio" to="/masonry" />
+                <ListItemLink primary="Shop" to="/pit" />
+                {/* <ListItemLink primary="SBS" to="/sbs" />
                 <ListItemLink primary="Liquidity" to="/liquidity" />
-                <ListItemLink primary="Regulations" to="/regulations" />
+                <ListItemLink primary="Regulations" to="/regulations" /> */}
                 <ListItem button component="a" href="https://docs.vinyl.finance">
                   <ListItemText>Docs</ListItemText>
                 </ListItem>
