@@ -24,12 +24,19 @@ const logosBySymbol: { [title: string]: string } = {
   TSHAREPNG: tShareLogoPNG,
   TSHARE: tShareLogo,
   TBOND: tBondLogo,
+  VINYL: tombLogo,
+  VINYLPNG: tombLogoPNG,
+  TRACKSPNG: tShareLogoPNG,
+  TRACKS: tShareLogo,
+  CD: tBondLogo,
   WFTM: wftmLogo,
   BOO: booLogo,
   SHIBA: shibaLogo,
   ZOO: zooLogo,
   'TOMB-FTM-LP': tombFtmLpLogo,
   'TSHARE-FTM-LP': tshareFtmLpLogo,
+  'VINYL-FTM-LP': tombFtmLpLogo,
+  'TRACKS-FTM-LP': tshareFtmLpLogo,
 };
 
 type LogoProps = {
