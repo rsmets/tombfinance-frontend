@@ -1,6 +1,6 @@
 {
   "BondOracle": {
-    "address": "0xE4EFD87ad34360932E5325D77A0a6e39147DEbFa",
+    "address": "0xe9c386BE19389834528E456e4731480b5D9d0C20",
     "abi": [
       {
         "inputs": [
@@ -457,7 +457,7 @@
     ]
   },
   "SeigniorageOracle": {
-    "address": "0x55530fA1B042582D5FA3C313a7e02d21Af6B82f4",
+    "address": "0xe9c386BE19389834528E456e4731480b5D9d0C20",
     "abi": [
       {
         "inputs": [
@@ -862,7 +862,7 @@
     ]
   },
   "tomb": {
-    "address": "0x6c021Ae822BEa943b2E66552bDe1D2696a53fbB7",
+    "address": "0x2ccca048D60ca0B3e33bE8884BC5937dC2Ea86f5",
     "abi": [
       {
         "inputs": [
@@ -1754,7 +1754,7 @@
     ]
   },
   "tShare": {
-    "address": "0x4cdF39285D7Ca8eB3f090fDA0C069ba5F4145B37",
+    "address": "0xf99b7AC6CbD8FD40437814A921B4c97623273cab",
     "abi": [
       {
         "inputs": [
@@ -2432,7 +2432,7 @@
     ]
   },
   "tBond": {
-    "address": "0x24248CD1747348bDC971a5395f4b3cd7feE94ea0",
+    "address": "0x002bC051feB715B95219222C93b1bAe819D1fCBf",
     "abi": [
       {
         "inputs": [],
@@ -2877,7 +2877,7 @@
     ]
   },
   "Treasury": {
-    "address": "0xF50c6dAAAEC271B56FCddFBC38F0b56cA45E6f0d",
+    "address": "0x269CAa232192bBc039ab91F56BD86C4bE60482e0",
     "abi": [
       {
         "anonymous": false,
@@ -4016,7 +4016,7 @@
     ]
   },
   "Masonry": {
-    "address": "0x8764DE60236C5843D9faEB1B638fbCE962773B67",
+    "address": "0x778Fd5F5e614c1b18e86bBA68d60f630f9FAd735",
     "abi": [
       {
         "anonymous": false,
@@ -4568,7 +4568,7 @@
     ]
   },
   "TombFtmRewardPool": {
-    "address": "0x9A896d3c54D7e45B558BD5fFf26bF1E8C031F93b",
+    "address": "0xE6b3D390dB1d0796D7E4fE88476920ae66A06793",
     "abi": [
       {
         "inputs": [
@@ -7003,7 +7003,7 @@
     ]
   },
   "TombFtmLpTombRewardPool": {
-    "address": "0xa7b9123f4b15fE0fF01F469ff5Eab2b41296dC0E",
+    "address": "0xA4351f3bA89DD9320dD4FA0d440ec0Be898050c3",
     "abi": [
       {
         "inputs": [
@@ -7494,7 +7494,7 @@
     ]
   },
   "TombFtmLPTShareRewardPool": {
-    "address": "0xcc0a87F7e7c693042a9Cc703661F5060c80ACb43",
+    "address": "0x66d1770f2fC1342bA4abc7B62F1f53e0a3929cCF",
     "abi": [
       {
         "inputs": [
