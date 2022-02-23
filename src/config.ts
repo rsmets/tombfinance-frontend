@@ -27,7 +27,7 @@ const configurations: { [env: string]: Configuration } = {
   //   masonryLaunchesAt: new Date('2022-02-03T00:00:00Z'),
   //   refreshInterval: 10000,
   // },
-  development: {
+  production: {
     chainId: ChainId.FTMTESTNET,
     networkName: 'Fantom Opera Testnet',
     ftmscanUrl: 'https://testnet.ftmscan.com',
@@ -40,8 +40,8 @@ const configurations: { [env: string]: Configuration } = {
       ZOO: ['0x2317610e609674e53D9039aaB85D8cAd8485A7c5', 0],
       SHIBA: ['0x39523112753956d19A3d6a30E758bd9FF7a8F3C0', 9],
       'USDT-FTM-LP': ['0xE7e3461C2C03c18301F66Abc9dA1F385f45047bA', 18],
-      'VINYL-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
-      'TRACKS-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
+      'VINYL-FTM-LP': ['0x5c15cf512041880a64c4fb9e5dded11bddeedae1', 18],
+      'TRACKS-FTM-LP': ['0xd875d2edcc2d472f1207b5ea085162023dc83991', 18],
       'TOMB-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
       'TSHARE-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
     },
@@ -50,11 +50,12 @@ const configurations: { [env: string]: Configuration } = {
     masonryLaunchesAt: new Date('2022-02-03T00:00:00Z'),
     refreshInterval: 10000,
   },
-  production: {
+  development: {
     chainId: ChainId.MAINNET,
     networkName: 'Fantom Opera Mainnet',
     ftmscanUrl: 'https://ftmscan.com',
     defaultProvider: 'https://rpc.ftm.tools/',
+      // defaultProvider: 'http://127.0.0.1:8545/', // TODO: figure out how to host a local RPC
     deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
     externalTokens: {
       WFTM: ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
@@ -139,7 +140,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     poolId: 0,
     sectionInUI: 1,
     contract: 'TombFtmLpTombRewardPool',
-    depositTokenName: 'TOMB-FTM-LP',
+    // depositTokenName: 'TOMB-FTM-LP',
+    depositTokenName: 'VINYL-FTM-LP',
     earnTokenName: 'VINYL',
     finished: false,
     sort: 5,
@@ -150,7 +152,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     poolId: 0,
     sectionInUI: 1,
     contract: 'TombFtmLpTombRewardPoolOld',
-    depositTokenName: 'TOMB-FTM-LP',
+    // depositTokenName: 'TOMB-FTM-LP',
+    depositTokenName: 'VINYL-FTM-LP',
     earnTokenName: 'VINYL',
     finished: true,
     sort: 9,
@@ -161,7 +164,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     poolId: 0,
     sectionInUI: 2,
     contract: 'TombFtmLPTShareRewardPool',
-    depositTokenName: 'TOMB-FTM-LP',
+    // depositTokenName: 'TOMB-FTM-LP',
+    depositTokenName: 'VINYL-FTM-LP',
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 6,
@@ -180,5 +184,6 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
 };
 
-export default configurations[process.env.NODE_ENV || 'development'];
+export default configurations[process.env.NODE_ENV || 'production'];
+// export default configurations[process.env.NODE_ENV || 'development'];
 // export default configurations[process.env.NODE_ENV || 'local'];
