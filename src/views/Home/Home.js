@@ -166,7 +166,9 @@ const Home = () => {
     <Grid item  xs={12} sm={12} justify="center"  style={{ margin: '12px', display: 'flex' }}>
             <Alert variant="filled" severity="warning">
               <b>
-      Please visit our <StyledLink target="_blank" href="https://docs.vinyl.finance">documentation</StyledLink> before purchasing VINYL or TRACKS!</b>
+      Vinyl Finance is still under construction! Please follow us on <StyledLink target="_blank" href="https://twitter.com/vinyl_finance">Twitter</StyledLink> and join our <StyledLink target="_blank" href="https://discord.gg/aRUReshWyY">Discord</StyledLink> for launch updates.
+      {/* Please visit our <StyledLink target="_blank" href="https://docs.vinyl.finance">documentation</StyledLink> before purchasing VINYL or TRACKS! */}
+      </b>
             </Alert>
         </Grid>
         </Grid>
@@ -338,7 +340,7 @@ const Home = () => {
                 </CardIcon>
               </Box>
               <Box mt={2}>
-                <Button color="primary" disabled={true} onClick={onPresentTombZap} variant="contained">
+                <Button color="primary" disabled={false} onClick={onPresentTombZap} variant="contained">
                   Zap In
                 </Button>
               </Box>
