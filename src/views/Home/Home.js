@@ -190,7 +190,7 @@ const Home = () => {
                 Stake Now
               </Button>
               {/* <Button href="/club" variant="contained" style={{ marginRight: '10px' }}> */}
-              <Button href="/cemetery" variant="contained" style={{ marginRight: '10px' }}>
+              <Button color="primary" href="/cemetery" variant="contained" style={{ marginRight: '10px' }}>
                 Farm Now
               </Button>
               <Button
@@ -203,8 +203,14 @@ const Home = () => {
               >
                 Buy VINYL
               </Button>
-              <Button variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
+              <Button color="primary" variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
                 Buy TRACKS
+              </Button>
+              <Button color="primary" href="/masonry" variant="contained" style={{ marginLeft: '10px', marginRight: '10px' }}>
+                VINYL Chart
+              </Button>
+              <Button color="primary" href="/masonry" variant="contained" style={{ marginRight: '10px' }}>
+                TRACKS Chart
               </Button>
             </CardContent>
           </Card>
