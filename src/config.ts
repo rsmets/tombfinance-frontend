@@ -3,6 +3,31 @@ import { ChainId } from '@spookyswap/sdk';
 import { Configuration } from './tomb-finance/config';
 import { BankInfo } from './tomb-finance';
 
+const config: Configuration = {
+  chainId: ChainId.MAINNET,
+  networkName: 'Fantom Opera Mainnet',
+  ftmscanUrl: 'https://ftmscan.com',
+  defaultProvider: 'https://rpc.ftm.tools/',
+    // defaultProvider: 'http://127.0.0.1:8545/', // TODO: figure out how to host a local RPC
+  deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
+  externalTokens: {
+    WFTM: ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
+    FUSDT: ['0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6], // This is actually usdc on mainnet not fusdt
+    BOO: ['0x841FAD6EAe12c286d1Fd18d1d525DFfA75C7EFFE', 18],
+    ZOO: ['0x09e145a1d53c0045f41aeef25d8ff982ae74dd56', 0],
+    SHIBA: ['0x9ba3e4f84a34df4e08c112e1a0ff148b81655615', 9],
+    'USDT-FTM-LP': ['0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c', 18],
+    'VINYL-FTM-LP': ['0x5c15cf512041880a64c4fb9e5dded11bddeedae1', 18],
+    'TRACKS-FTM-LP': ['0xd875d2edcc2d472f1207b5ea085162023dc83991', 18],
+    'TOMB-FTM-LP': ['0x2A651563C9d3Af67aE0388a5c8F89b867038089e', 18],
+    'TSHARE-FTM-LP': ['0x4733bc45eF91cF7CcEcaeeDb794727075fB209F2', 18],
+  },
+  baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
+  bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
+  masonryLaunchesAt: new Date('2020-12-11T00:00:00Z'),
+  refreshInterval: 10000,
+}
+
 const configurations: { [env: string]: Configuration } = {
   // local: {
   //   chainId: 1337,
@@ -27,7 +52,7 @@ const configurations: { [env: string]: Configuration } = {
   //   masonryLaunchesAt: new Date('2022-02-03T00:00:00Z'),
   //   refreshInterval: 10000,
   // },
-  production: {
+  development: {
     chainId: ChainId.FTMTESTNET,
     networkName: 'Fantom Opera Testnet',
     ftmscanUrl: 'https://testnet.ftmscan.com',
@@ -50,7 +75,7 @@ const configurations: { [env: string]: Configuration } = {
     masonryLaunchesAt: new Date('2022-02-03T00:00:00Z'),
     refreshInterval: 10000,
   },
-  development: {
+  production: {
     chainId: ChainId.MAINNET,
     networkName: 'Fantom Opera Mainnet',
     ftmscanUrl: 'https://ftmscan.com',
@@ -133,11 +158,11 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 4,
-    closedForStaking: true,
+    closedForStaking: false,
   },
   TombFtmLPTombRewardPool: {
     name: 'Earn VINYL by VINYL-FTM LP',
-    poolId: 0,
+    poolId: 4,
     sectionInUI: 1,
     contract: 'TombFtmLpTombRewardPool',
     // depositTokenName: 'TOMB-FTM-LP',
@@ -145,11 +170,11 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 5,
-    closedForStaking: true,
+    closedForStaking: false,
   },
   TombFtmLPTombRewardPoolOld: {
     name: 'Earn VINYL by VINYL-FTM LP',
-    poolId: 0,
+    poolId: 5,
     sectionInUI: 1,
     contract: 'TombFtmLpTombRewardPoolOld',
     // depositTokenName: 'TOMB-FTM-LP',
@@ -161,7 +186,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   TombFtmLPTShareRewardPool: {
     name: 'Earn TRACKS by VINYL-FTM LP',
-    poolId: 0,
+    poolId: 6,
     sectionInUI: 2,
     contract: 'TombFtmLPTShareRewardPool',
     // depositTokenName: 'TOMB-FTM-LP',
@@ -173,7 +198,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   TshareFtmLPTShareRewardPool: {
     name: 'Earn TRACKS by TRACKS-FTM LP',
-    poolId: 1,
+    poolId: 7,
     sectionInUI: 2,
     contract: 'TshareFtmLPTShareRewardPool',
     // depositTokenName: 'TSHARE-FTM-LP',
@@ -185,6 +210,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
 };
 
-export default configurations[process.env.NODE_ENV || 'production'];
+export default config;
+// export default configurations[process.env.NODE_ENV || 'production'];
 // export default configurations[process.env.NODE_ENV || 'development'];
 // export default configurations[process.env.NODE_ENV || 'local'];
