@@ -414,12 +414,16 @@ export class TombFinance {
   ): Promise<BigNumber> {
     const pool = this.contracts[poolName];
     try {
+      // debugger;
       if (earnTokenName === 'VINYL') {
         return await pool.pendingTOMB(poolId, account);
+        // return BigNumber.from(1000000000000000);
       } else {
         return await pool.pendingShare(poolId, account);
+        // return BigNumber.from(1000000000000000);
       }
     } catch (err) {
+      // debugger;
       console.error(`Failed to call earned() on pool ${pool.address}: ${err.stack}`);
       return BigNumber.from(0);
     }

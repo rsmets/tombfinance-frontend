@@ -1,6 +1,6 @@
 {
   "BondOracle": {
-    "address": "0xe9c386BE19389834528E456e4731480b5D9d0C20",
+    "address": "0x5351ff7304F22af9eDE60801bdf6959fE16e9203",
     "abi": [
       {
         "inputs": [
@@ -457,7 +457,7 @@
     ]
   },
   "SeigniorageOracle": {
-    "address": "0xe9c386BE19389834528E456e4731480b5D9d0C20",
+    "address": "0x5351ff7304F22af9eDE60801bdf6959fE16e9203",
     "abi": [
       {
         "inputs": [
@@ -2877,7 +2877,7 @@
     ]
   },
   "Treasury": {
-    "address": "0x800407887607539Cd30F0d37b32a97713A08Fe7a",
+    "address": "0x7911f4C934c01CC4e03670105Cce7adADAFF444f",
     "abi": [
       {
         "anonymous": false,
@@ -4016,7 +4016,7 @@
     ]
   },
   "Masonry": {
-    "address": "0x778Fd5F5e614c1b18e86bBA68d60f630f9FAd735",
+    "address": "0xd42C4Fa561BdaFE6302E0605283665e062Edb542",
     "abi": [
       {
         "anonymous": false,
