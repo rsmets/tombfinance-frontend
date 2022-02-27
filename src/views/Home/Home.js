@@ -365,7 +365,7 @@ const Home = () => {
               <Box mt={2}>
                 <CardIcon>
                   {/* <TokenSymbol symbol="TSHARE-FTM-LP" /> */}
-                  <TokenSymbol symbol="VINYL-FTM-LP" />
+                  <TokenSymbol symbol="TRACKS-FTM-LP" />
                 </CardIcon>
               </Box>
               <Box mt={2}>
