@@ -15,6 +15,9 @@ import booLogo from '../../assets/img/spooky.png';
 import zooLogo from '../../assets/img/zoo_logo.svg';
 import shibaLogo from '../../assets/img/shiba_logo.svg';
 
+import _2ombLogo from '../../assets/img/2OMB.png';
+import usdcLogo from '../../assets/img/USDC.png';
+
 const logosBySymbol: { [title: string]: string } = {
   //Real tokens
   //=====================
@@ -37,6 +40,8 @@ const logosBySymbol: { [title: string]: string } = {
   'TSHARE-FTM-LP': tshareFtmLpLogo,
   'VINYL-FTM-LP': tombFtmLpLogo,
   'TRACKS-FTM-LP': tshareFtmLpLogo,
+  "2OMB": _2ombLogo, //2OMB
+  USDC: usdcLogo,
 };
 
 type LogoProps = {
