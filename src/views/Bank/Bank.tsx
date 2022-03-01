@@ -101,12 +101,12 @@ const Bank: React.FC = () => {
 
 const LPTokenHelpText: React.FC<{ bank: BankEntity }> = ({ bank }) => {
   const tombFinance = useTombFinance();
-  const tombAddr = tombFinance.TOMB.address;
-  const tshareAddr = tombFinance.TSHARE.address;
+  const tombAddr = tombFinance.VINYL.address;
+  const tshareAddr = tombFinance.TRACKS.address;
 
   let pairName: string;
   let uniswapUrl: string;
-  // if (bank.depositTokenName.includes('TOMB')) {
+  // if (bank.depositTokenName.includes('VINYL')) {
   if (bank.depositTokenName.includes('VINYL')) {
     pairName = 'VINYL-FTM pair';
     uniswapUrl = 'https://spookyswap.finance/add/FTM/' + tombAddr;

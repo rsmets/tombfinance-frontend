@@ -41,7 +41,7 @@ const Pit: React.FC = () => {
     async (amount: string) => {
       const tx = await tombFinance.buyBonds(amount);
       addTransaction(tx, {
-        summary: `Buy ${Number(amount).toFixed(2)} TBOND with ${amount} TOMB`,
+        summary: `Buy ${Number(amount).toFixed(2)} CD with ${amount} VINYL`,
       });
     },
     [tombFinance, addTransaction],
@@ -70,7 +70,7 @@ const Pit: React.FC = () => {
               <StyledCardWrapper>
                 <ExchangeCard
                   action="Purchase"
-                  fromToken={tombFinance.TOMB}
+                  fromToken={tombFinance.VINYL}
                   fromTokenName="VINYL"
                   toToken={tombFinance.TBOND}
                   toTokenName="CD"
@@ -101,7 +101,7 @@ const Pit: React.FC = () => {
                   action="Redeem"
                   fromToken={tombFinance.TBOND}
                   fromTokenName="CD"
-                  toToken={tombFinance.TOMB}
+                  toToken={tombFinance.VINYL}
                   toTokenName="VINYL"
                   priceDesc={`${getDisplayBalance(bondBalance)} CD Available in wallet`}
                   onExchange={handleRedeemBonds}

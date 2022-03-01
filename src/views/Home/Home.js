@@ -236,7 +236,7 @@ const Home = () => {
               </Button>
               <Box mt={2}>
                 <CardIcon>
-                  <TokenSymbol symbol="TOMB" />
+                  <TokenSymbol symbol="VINYL" />
                 </CardIcon>
               </Box>
               Current Price

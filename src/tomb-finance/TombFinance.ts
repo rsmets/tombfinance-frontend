@@ -13,7 +13,7 @@ import IUniswapV2PairABI from './IUniswapV2Pair.abi.json';
 import config, { bankDefinitions } from '../config';
 import moment from 'moment';
 import { parseUnits } from 'ethers/lib/utils';
-import { FTM_TICKER, SPOOKY_ROUTER_ADDR, TOMB_TICKER } from '../utils/constants';
+import { FTM_TICKER, SPOOKY_ROUTER_ADDR, VINYL_TICKER } from '../utils/constants';
 /**
  * An API module of Tomb Finance contracts.
  * All contract-interacting domain logic should be defined in here.
@@ -28,9 +28,7 @@ export class TombFinance {
   masonryVersionOfUser?: string;
 
   TOMBWFTM_LP: Contract;
-  TOMB: ERC20;
   VINYL: ERC20;
-  TSHARE: ERC20;
   TRACKS: ERC20;
   TBOND: ERC20;
   CD: ERC20
@@ -52,8 +50,8 @@ export class TombFinance {
     this.VINYL = new ERC20(deployments.tomb.address, provider, 'VINYL');
     this.TRACKS = new ERC20(deployments.tShare.address, provider, 'TRACKS');
     this.CD = new ERC20(deployments.tBond.address, provider, 'CD');
-    this.TOMB = new ERC20(deployments.tomb.address, provider, 'VINYL');    
-    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'TRACKS');
+    // this.TOMB = new ERC20(deployments.tomb.address, provider, 'VINYL');    
+    // this.TSHARE = new ERC20(deployments.tShare.address, provider, 'TRACKS');
     this.TBOND = new ERC20(deployments.tBond.address, provider, 'CD');
     this.FTM = this.externalTokens['WFTM'];
 
@@ -75,7 +73,7 @@ export class TombFinance {
     for (const [name, contract] of Object.entries(this.contracts)) {
       this.contracts[name] = contract.connect(this.signer);
     }
-    const tokens = [this.TOMB, this.TSHARE, this.TBOND, ...Object.values(this.externalTokens)];
+    const tokens = [this.VINYL, this.TRACKS, this.TBOND, ...Object.values(this.externalTokens)];
     for (const token of tokens) {
       token.connect(this.signer);
     }
@@ -101,23 +99,23 @@ export class TombFinance {
 
   async getTombStat(): Promise<TokenStat> {
     const { TombFtmRewardPool, TombFtmLpTombRewardPool, TombFtmLpTombRewardPoolOld } = this.contracts;
-    const supply = await this.TOMB.totalSupply();
-    const tombRewardPoolSupply = await this.TOMB.balanceOf(TombFtmRewardPool.address);
-    const tombRewardPoolSupply2 = await this.TOMB.balanceOf(TombFtmLpTombRewardPool.address);
-    const tombRewardPoolSupplyOld = await this.TOMB.balanceOf(TombFtmLpTombRewardPoolOld.address);
+    const supply = await this.VINYL.totalSupply();
+    const tombRewardPoolSupply = await this.VINYL.balanceOf(TombFtmRewardPool.address);
+    const tombRewardPoolSupply2 = await this.VINYL.balanceOf(TombFtmLpTombRewardPool.address);
+    const tombRewardPoolSupplyOld = await this.VINYL.balanceOf(TombFtmLpTombRewardPoolOld.address);
     const tombCirculatingSupply = supply
       .sub(tombRewardPoolSupply)
       .sub(tombRewardPoolSupply2)
       .sub(tombRewardPoolSupplyOld);
-    const priceInFTM = await this.getTokenPriceFromPancakeswap(this.TOMB);
+    const priceInFTM = await this.getTokenPriceFromPancakeswap(this.VINYL);
     const priceOfOneFTM = await this.getWFTMPriceFromPancakeswap();
     const priceOfTombInDollars = (Number(priceInFTM) * Number(priceOfOneFTM)).toFixed(2);
 
     return {
       tokenInFtm: priceInFTM,
       priceInDollars: priceOfTombInDollars,
-      totalSupply: getDisplayBalance(supply, this.TOMB.decimal, 0),
-      circulatingSupply: getDisplayBalance(tombCirculatingSupply, this.TOMB.decimal, 0),
+      totalSupply: getDisplayBalance(supply, this.VINYL.decimal, 0),
+      circulatingSupply: getDisplayBalance(tombCirculatingSupply, this.VINYL.decimal, 0),
     };
   }
 
@@ -130,8 +128,8 @@ export class TombFinance {
     const lpToken = this.externalTokens[name];
     const lpTokenSupplyBN = await lpToken.totalSupply();
     const lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
-    const token0 = name.startsWith('TOMB') ? this.TOMB : this.TSHARE;
-    const isTomb = name.startsWith('TOMB');
+    const token0 = name.startsWith('VINYL') ? this.VINYL : this.TRACKS;
+    const isTomb = name.startsWith('VINYL');
     const tokenAmountBN = await token0.balanceOf(lpToken.address);
     const tokenAmount = getDisplayBalance(tokenAmountBN, 18);
 
@@ -185,10 +183,10 @@ export class TombFinance {
   async getShareStat(): Promise<TokenStat> {
     const { TombFtmLPTShareRewardPool } = this.contracts;
 
-    const supply = await this.TSHARE.totalSupply();
+    const supply = await this.TRACKS.totalSupply();
 
-    const priceInFTM = await this.getTokenPriceFromPancakeswap(this.TSHARE);
-    const tombRewardPoolSupply = await this.TSHARE.balanceOf(TombFtmLPTShareRewardPool.address);
+    const priceInFTM = await this.getTokenPriceFromPancakeswap(this.TRACKS);
+    const tombRewardPoolSupply = await this.TRACKS.balanceOf(TombFtmLPTShareRewardPool.address);
     const tShareCirculatingSupply = supply.sub(tombRewardPoolSupply);
     const priceOfOneFTM = await this.getWFTMPriceFromPancakeswap();
     const priceOfSharesInDollars = (Number(priceInFTM) * Number(priceOfOneFTM)).toFixed(2);
@@ -196,23 +194,23 @@ export class TombFinance {
     return {
       tokenInFtm: priceInFTM,
       priceInDollars: priceOfSharesInDollars,
-      totalSupply: getDisplayBalance(supply, this.TSHARE.decimal, 0),
-      circulatingSupply: getDisplayBalance(tShareCirculatingSupply, this.TSHARE.decimal, 0),
+      totalSupply: getDisplayBalance(supply, this.TRACKS.decimal, 0),
+      circulatingSupply: getDisplayBalance(tShareCirculatingSupply, this.TRACKS.decimal, 0),
     };
   }
 
   async getTombStatInEstimatedTWAP(): Promise<TokenStat> {
     const { SeigniorageOracle, TombFtmRewardPool } = this.contracts;
-    const expectedPrice = await SeigniorageOracle.twap(this.TOMB.address, ethers.utils.parseEther('1'));
+    const expectedPrice = await SeigniorageOracle.twap(this.VINYL.address, ethers.utils.parseEther('1'));
 
-    const supply = await this.TOMB.totalSupply();
-    const tombRewardPoolSupply = await this.TOMB.balanceOf(TombFtmRewardPool.address);
+    const supply = await this.VINYL.totalSupply();
+    const tombRewardPoolSupply = await this.VINYL.balanceOf(TombFtmRewardPool.address);
     const tombCirculatingSupply = supply.sub(tombRewardPoolSupply);
     return {
       tokenInFtm: getDisplayBalance(expectedPrice),
       priceInDollars: getDisplayBalance(expectedPrice),
-      totalSupply: getDisplayBalance(supply, this.TOMB.decimal, 0),
-      circulatingSupply: getDisplayBalance(tombCirculatingSupply, this.TOMB.decimal, 0),
+      totalSupply: getDisplayBalance(supply, this.VINYL.decimal, 0),
+      circulatingSupply: getDisplayBalance(tombCirculatingSupply, this.VINYL.decimal, 0),
     };
   }
 
@@ -297,7 +295,7 @@ export class TombFinance {
       return await poolContract.epochTombPerSecond(0);
     }
     const rewardPerSecond = await (poolContract as any).tSharePerSecond();
-    if (depositTokenName.startsWith('TOMB')) {
+    if (depositTokenName.startsWith('VINYL')) {
       return rewardPerSecond.mul(35500).div(59500);
     } else {
       return rewardPerSecond.mul(24000).div(59500);
@@ -380,8 +378,8 @@ export class TombFinance {
     }
 
     const TSHAREPrice = (await this.getShareStat()).priceInDollars;
-    const masonrytShareBalanceOf = await this.TSHARE.balanceOf(this.currentMasonry().address);
-    const masonryTVL = Number(getDisplayBalance(masonrytShareBalanceOf, this.TSHARE.decimal)) * Number(TSHAREPrice);
+    const masonrytShareBalanceOf = await this.TRACKS.balanceOf(this.currentMasonry().address);
+    const masonryTVL = Number(getDisplayBalance(masonrytShareBalanceOf, this.TRACKS.decimal)) * Number(TSHAREPrice);
 
     return totalValue + masonryTVL;
   }
@@ -572,8 +570,8 @@ export class TombFinance {
 
     //Mgod formula
     const amountOfRewardsPerDay = epochRewardsPerShare * Number(TOMBPrice) * 4;
-    const masonrytShareBalanceOf = await this.TSHARE.balanceOf(Masonry.address);
-    const masonryTVL = Number(getDisplayBalance(masonrytShareBalanceOf, this.TSHARE.decimal)) * Number(TSHAREPrice);
+    const masonrytShareBalanceOf = await this.TRACKS.balanceOf(Masonry.address);
+    const masonryTVL = Number(getDisplayBalance(masonrytShareBalanceOf, this.TRACKS.decimal)) * Number(TSHAREPrice);
     const realAPR = ((amountOfRewardsPerDay * 100) / masonryTVL) * 365;
     return realAPR;
   }
@@ -595,7 +593,7 @@ export class TombFinance {
     const Masonry = this.currentMasonry();
     const canWithdraw = await Masonry.canWithdraw(this.myAccount);
     const stakedAmount = await this.getStakedSharesOnMasonry();
-    const notStaked = Number(getDisplayBalance(stakedAmount, this.TSHARE.decimal)) === 0;
+    const notStaked = Number(getDisplayBalance(stakedAmount, this.TRACKS.decimal)) === 0;
     const result = notStaked ? true : canWithdraw;
     return result;
   }
@@ -613,7 +611,7 @@ export class TombFinance {
 
   async stakeShareToMasonry(amount: string): Promise<TransactionResponse> {
     if (this.isOldMasonryMember()) {
-      throw new Error("you're using old masonry. please withdraw and deposit the TSHARE again.");
+      throw new Error("you're using old masonry. please withdraw and deposit the TRACKS again.");
     }
     const Masonry = this.currentMasonry();
     return await Masonry.stake(decimalToBalance(amount));
@@ -745,13 +743,13 @@ export class TombFinance {
         // assetUrl = 'https://www.iconspng.com/uploads/vinyl-blue/vinyl-blue.png';
         // assetUrl = 'https://freesvg.org/img/dvd-004.png'
         assetUrl = 'https://i.ibb.co/wJr93pz/dvd-004.png'; // https://ibb.co/k36RkqS
-      } else if (assetName === 'TOMB') {
-        asset = this.TOMB;
+      } else if (assetName === 'VINYL') {
+        asset = this.VINYL;
         // assetUrl = 'https://tomb.finance/presskit/tomb_icon_noBG.png';
         // assetUrl = 'https://www.iconspng.com/images/vinyl/vinyl.jpg';
         assetUrl = 'https://i.ibb.co/DWKfmJh/vinyl.png'; // https://ibb.co/ZXTzvj5
-      } else if (assetName === 'TSHARE') {
-        asset = this.TSHARE;
+      } else if (assetName === 'TRACKS') {
+        asset = this.TRACKS;
         // assetUrl = 'https://tomb.finance/presskit/tshare_icon_noBG.png';
         // assetUrl = 'https://www.iconspng.com/images/shiny-vinyl.jpg';
         assetUrl = 'https://i.ibb.co/3drTgfN/shiny-vinyl.png';
@@ -789,7 +787,7 @@ export class TombFinance {
     const { SpookyRouter } = this.contracts;
     const { _reserve0, _reserve1 } = await this.TOMBWFTM_LP.getReserves();
     let quote;
-    if (tokenName === 'TOMB') {
+    if (tokenName === 'VINYL') {
       quote = await SpookyRouter.quote(parseUnits(tokenAmount), _reserve1, _reserve0);
     } else {
       quote = await SpookyRouter.quote(parseUnits(tokenAmount), _reserve0, _reserve1);
@@ -877,7 +875,7 @@ export class TombFinance {
     if (tokenName === FTM_TICKER) {
       estimate = await zapper.estimateZapIn(lpToken.address, SPOOKY_ROUTER_ADDR, parseUnits(amount, 18));
     } else {
-      const token = tokenName === TOMB_TICKER ? this.TOMB : this.TSHARE;
+      const token = tokenName === VINYL_TICKER ? this.VINYL : this.TRACKS;
       estimate = await zapper.estimateZapInToken(
         token.address,
         lpToken.address,
@@ -896,7 +894,7 @@ export class TombFinance {
       };
       return await zapper.zapIn(lpToken.address, SPOOKY_ROUTER_ADDR, this.myAccount, overrides);
     } else {
-      const token = tokenName === TOMB_TICKER ? this.TOMB : this.TSHARE;
+      const token = tokenName === VINYL_TICKER ? this.VINYL : this.TRACKS;
       return await zapper.zapInToken(
         token.address,
         parseUnits(amount, 18),
