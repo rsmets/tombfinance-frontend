@@ -33,6 +33,6 @@ npx prettier --write .
 ## Useful Resources
 
 - [Our project documentation](https://docs.vinyl.finance/) will help you understand before start contributing
-- Join our [Discord](https://discord.gg/tombfinance) community
-- Or if you are more of a [Telegram Zombie](https://discord.gg/tombfinance) we have that too
+- Join our [Discord](https://discord.gg/VqwsjEFVzc) community
+- Or if you are more of a [Telegram Zombie](https://discord.gg/VqwsjEFVzc) we have that too
 - Bugs? Use the [Issues](https://github.com/tombfinance/tombfinance-frontend/issues) section of our github to report them
