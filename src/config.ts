@@ -5,10 +5,11 @@ import { BankInfo } from './tomb-finance';
 
 const config: Configuration = {
   chainId: ChainId.MAINNET,
+  defaultProvider: 'https://rpc.ftm.tools/',
+  // chainId: 31337,
+  // defaultProvider: 'http://localhost:8545', 
   networkName: 'Fantom Opera Mainnet',
   ftmscanUrl: 'https://ftmscan.com',
-  defaultProvider: 'https://rpc.ftm.tools/',
-    // defaultProvider: 'http://127.0.0.1:8545/', // TODO: figure out how to host a local RPC
   deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
   externalTokens: {
     WFTM: ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
