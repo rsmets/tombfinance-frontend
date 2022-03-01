@@ -20,8 +20,6 @@ const config: Configuration = {
     'USDT-FTM-LP': ['0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c', 18],
     'VINYL-FTM-LP': ['0x5c15cf512041880a64c4fb9e5dded11bddeedae1', 18],
     'TRACKS-FTM-LP': ['0x7Da174a87BeC2D4681C291734a6d41A2F2a594c7', 18],
-    'TOMB-FTM-LP': ['0x2A651563C9d3Af67aE0388a5c8F89b867038089e', 18],
-    'TSHARE-FTM-LP': ['0x7Da174a87BeC2D4681C291734a6d41A2F2a594c7', 18],
     "2OMB": ['0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae', 18], // for gen pools
     USDC: ['0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6], // This is actually usdc on mainnet not fusdt
   },

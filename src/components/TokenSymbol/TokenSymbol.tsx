@@ -36,8 +36,6 @@ const logosBySymbol: { [title: string]: string } = {
   BOO: booLogo,
   SHIBA: shibaLogo,
   ZOO: zooLogo,
-  'TOMB-FTM-LP': tombFtmLpLogo,
-  'TSHARE-FTM-LP': tshareFtmLpLogo,
   'VINYL-FTM-LP': tombFtmLpLogo,
   'TRACKS-FTM-LP': tshareFtmLpLogo,
   "2OMB": _2ombLogo, //2OMB
