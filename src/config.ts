@@ -3,6 +3,7 @@ import { ChainId } from '@spookyswap/sdk';
 import { Configuration } from './tomb-finance/config';
 import { BankInfo } from './tomb-finance';
 
+// tomb contract config
 const config: Configuration = {
   chainId: ChainId.MAINNET,
   defaultProvider: 'https://rpc.ftm.tools/',
@@ -28,6 +29,34 @@ const config: Configuration = {
   masonryLaunchesAt: new Date('2020-12-11T00:00:00Z'),
   refreshInterval: 10000,
 }
+
+// grape contract config
+const configGrape: Configuration = {
+  chainId: ChainId.MAINNET,
+  defaultProvider: 'https://rpc.ftm.tools/',
+  // chainId: 31337,
+  // defaultProvider: 'http://localhost:8545', 
+  networkName: 'Fantom Opera Mainnet',
+  ftmscanUrl: 'https://ftmscan.com',
+  deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
+  externalTokens: {
+    WFTM: ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
+    FUSDT: ['0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6], // This is actually usdc on mainnet not fusdt
+    BOO: ['0x841FAD6EAe12c286d1Fd18d1d525DFfA75C7EFFE', 18],
+    ZOO: ['0x09e145a1d53c0045f41aeef25d8ff982ae74dd56', 0],
+    SHIBA: ['0x9ba3e4f84a34df4e08c112e1a0ff148b81655615', 9],
+    'USDT-FTM-LP': ['0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c', 18],
+    'VINYL-FTM-LP': ['0xc9c6b1187f8b3a48ca480c8edaf0524f9c93e971', 18],
+    'TRACKS-FTM-LP': ['0xCa5Cf8edd0cc464b034516d37cCCa4777F4B350d', 18],
+    "2OMB": ['0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae', 18], // for gen pools
+    USDC: ['0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6], // This is actually usdc on mainnet not fusdt
+  },
+  baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
+  bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
+  masonryLaunchesAt: new Date('2020-12-11T00:00:00Z'),
+  refreshInterval: 10000,
+}
+
 
 const configurations: { [env: string]: Configuration } = {
   // local: {
