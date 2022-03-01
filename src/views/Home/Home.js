@@ -336,7 +336,7 @@ const Home = () => {
               <h2>VINYL-FTM Spooky LP</h2>
               <Box mt={2}>
                 <CardIcon>
-                  <TokenSymbol symbol="TOMB-FTM-LP" />
+                  <TokenSymbol symbol="VINYL-FTM-LP" />
                 </CardIcon>
               </Box>
               <Box mt={2}>
