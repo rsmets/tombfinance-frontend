@@ -208,10 +208,10 @@ const Home = () => {
               <Button color="primary" variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
                 Buy TRACKS
               </Button>
-              <Button color="primary" href="https://dexscreener.com/fantom/0x5c15cf512041880a64c4fb9e5dded11bddeedae1" variant="contained" style={{ marginLeft: '10px', marginRight: '10px' }}>
+              <Button color="primary" href="https://dexscreener.com/fantom/0x2eb546901bab4bd01898e1c4dffd750a43f063d2" variant="contained" style={{ marginLeft: '10px', marginRight: '10px' }}>
                 VINYL Chart
               </Button>
-              <Button color="primary" href="https://dexscreener.com/fantom/0xd875d2edcc2d472f1207b5ea085162023dc83991" variant="contained" style={{ marginRight: '10px' }}>
+              <Button color="primary" href="https://dexscreener.com/fantom/0xbd652ceeaaf498c2745b51e61921119b8b773277" variant="contained" style={{ marginRight: '10px' }}>
                 TRACKS Chart
               </Button>
             </CardContent>
