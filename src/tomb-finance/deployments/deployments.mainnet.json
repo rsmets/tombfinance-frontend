@@ -1,6 +1,6 @@
 {
   "BondOracle": {
-    "address": "0x3516b9356C89E409e40C89898449f75ee38f04Dc",
+    "address": "0x840748F7Fd3EA956E5f4c88001da5CC1ABCBc038",
     "abi": [
       {
         "inputs": [
@@ -457,7 +457,7 @@
     ]
   },
   "SeigniorageOracle": {
-    "address": "0x3516b9356C89E409e40C89898449f75ee38f04Dc",
+    "address": "0x840748F7Fd3EA956E5f4c88001da5CC1ABCBc038",
     "abi": [
       {
         "inputs": [
@@ -862,7 +862,7 @@
     ]
   },
   "tomb": {
-    "address": "0x5E5c6C0a42B9F3f543DBBb9eb75c2318B4F21b20",
+    "address": "0xf1D7a65B88Ec520FA13dB4f3BD1bCE96789383a6",
     "abi": [
       {
         "inputs": [
@@ -1754,7 +1754,7 @@
     ]
   },
   "tShare": {
-    "address": "0xe073636417E2DC796656D433eFfa606fF6230B56",
+    "address": "0x90DE9952b0d53b85A7bE2bDDA7C1c3899A720563",
     "abi": [
       {
         "inputs": [
@@ -2432,7 +2432,7 @@
     ]
   },
   "tBond": {
-    "address": "0xc986538697AFAa92D24317C9e7dCAD2c01625846",
+    "address": "0xfAAee6f59ae6E35FB7f7c6c7BF8C297dbBD3408d",
     "abi": [
       {
         "inputs": [],
@@ -2877,7 +2877,7 @@
     ]
   },
   "Treasury": {
-    "address": "0x6aad433DF588833C80965719B9ebC31ADd0b5951",
+    "address": "0x7CFE01767780C101Da0aAB9aef02Bd23A4702D92",
     "abi": [
       {
         "anonymous": false,
@@ -4016,7 +4016,7 @@
     ]
   },
   "Masonry": {
-    "address": "0x9105C17a6436D01AF8855263d4569Aaf14af68D6",
+    "address": "0xedBfeB07DF3b9ce17691f03722AE6E253e9dB130",
     "abi": [
       {
         "anonymous": false,
@@ -4568,7 +4568,7 @@
     ]
   },
   "TombFtmRewardPool": {
-    "address": "0x07Efc8dB95a5CC43b875b38aFad2710437bb28A0",
+    "address": "0x363d09adBf48E3e27A38C43F0f322551426ebaF6",
     "abi": [
       {
         "inputs": [
@@ -5054,7 +5054,7 @@
     ]
   },
   "TombBooGenesisRewardPool": {
-    "address": "0x07Efc8dB95a5CC43b875b38aFad2710437bb28A0",
+    "address": "0x363d09adBf48E3e27A38C43F0f322551426ebaF6",
     "abi": [
       {
         "inputs": [
@@ -5540,7 +5540,7 @@
     ]
   },
   "TombZooGenesisRewardPool": {
-    "address": "0x07Efc8dB95a5CC43b875b38aFad2710437bb28A0",
+    "address": "0x363d09adBf48E3e27A38C43F0f322551426ebaF6",
     "abi": [
       {
         "inputs": [
@@ -6026,7 +6026,7 @@
     ]
   },
   "TombShibaGenesisRewardPool": {
-    "address": "0x07Efc8dB95a5CC43b875b38aFad2710437bb28A0",
+    "address": "0x363d09adBf48E3e27A38C43F0f322551426ebaF6",
     "abi": [
       {
         "inputs": [
@@ -6512,7 +6512,7 @@
     ]
   },
   "TombFtmLpTombRewardPoolOld": {
-    "address": "0x4AC4968b874c50544214D1E5F57D76D13d402876",
+    "address": "0x076b650cd39CFFE75c41BC94B4D803BD232c0D81",
     "abi": [
       {
         "inputs": [
@@ -7003,7 +7003,7 @@
     ]
   },
   "TombFtmLpTombRewardPool": {
-    "address": "0x4AC4968b874c50544214D1E5F57D76D13d402876",
+    "address": "0x076b650cd39CFFE75c41BC94B4D803BD232c0D81",
     "abi": [
       {
         "inputs": [
@@ -7494,7 +7494,7 @@
     ]
   },
   "TombFtmLPTShareRewardPool": {
-    "address": "0x08E0B50C0F8f31F77a88428F9949835f2889CA43",
+    "address": "0x8a45755Ffae9984b80Afa559c45E4864Cc658d9C",
     "abi": [
       {
         "inputs": [
@@ -7980,7 +7980,7 @@
     ]
   },
   "TshareFtmLPTShareRewardPool": {
-    "address": "0x08E0B50C0F8f31F77a88428F9949835f2889CA43",
+    "address": "0x8a45755Ffae9984b80Afa559c45E4864Cc658d9C",
     "abi": [
       {
         "inputs": [
@@ -8933,7 +8933,7 @@
     ]
   },
   "TaxOffice": {
-    "address": "0x878757e4D7fa643EFA1D3FAD0D68E6569aF40aDf",
+    "address": "0x47b12608903502D34a067f2Cd2C11DD8F5fE6C65",
     "abi": [
       {
         "anonymous": false,
