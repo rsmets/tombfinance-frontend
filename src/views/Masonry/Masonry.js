@@ -116,7 +116,7 @@ const Masonry = () => {
             <Grid container justify="center">
               <Box mt={3} style={{ width: '600px' }}>
                 <Alert variant="filled" severity="warning">
-                  Staked TRACKS can only be withdrawn after 6 epochs since deposit.
+                  Staked TRACKS can only be withdrawn after 3 epochs, 18 hrs, since deposit.
                 </Alert>
               </Box>
             </Grid>

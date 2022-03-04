@@ -3,12 +3,14 @@ import { ChainId } from '@spookyswap/sdk';
 import { Configuration } from './tomb-finance/config';
 import { BankInfo } from './tomb-finance';
 
+const externalContractInfo = require('./tomb-finance/deployments/deployments-external.mainnet.json');
+
 // tomb contract config
 const config: Configuration = {
-  chainId: ChainId.MAINNET,
-  defaultProvider: 'https://rpc.ftm.tools/',
-  // chainId: 31337,
-  // defaultProvider: 'http://localhost:8545', 
+  // chainId: ChainId.MAINNET,
+  // defaultProvider: 'https://rpc.ftm.tools/',
+  chainId: 31337,
+  defaultProvider: 'http://localhost:8545', 
   networkName: 'Fantom Opera Mainnet',
   ftmscanUrl: 'https://ftmscan.com',
   deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
@@ -19,8 +21,8 @@ const config: Configuration = {
     ZOO: ['0x09e145a1d53c0045f41aeef25d8ff982ae74dd56', 0],
     SHIBA: ['0x9ba3e4f84a34df4e08c112e1a0ff148b81655615', 9],
     'USDT-FTM-LP': ['0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c', 18],
-    'VINYL-FTM-LP': ['0x2eb546901bab4bd01898e1c4dffd750a43f063d2', 18],
-    'TRACKS-FTM-LP': ['0xbd652ceeaaf498c2745b51e61921119b8b773277', 18],
+    'VINYL-FTM-LP': [externalContractInfo.tombFtmLpSpookyAddress, 18],
+    'TRACKS-FTM-LP': [externalContractInfo.tsharesFtmLpSpookyAddress, 18],
     "2OMB": ['0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae', 18], // for gen pools
     USDC: ['0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6], // This is actually usdc on mainnet not fusdt
   },

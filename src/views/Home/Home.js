@@ -27,6 +27,11 @@ import ZapModal from '../Bank/components/ZapModal';
 import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
 
+import config from '../../config';
+
+const tombFtmLpAddress = config.externalTokens['VINYL-FTM-LP'][0];
+const tshareFtmLpAddress = config.externalTokens['TRACKS-FTM-LP'][0];
+
 const BackgroundImage = createGlobalStyle`
   body {
     background: url(${HomeImage}) no-repeat !important;
@@ -64,6 +69,8 @@ const Home = () => {
 
   const buyTombAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tomb.address;
   const buyTShareAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tShare.address;
+  const tombChartUrl = 'https://dexscreener.com/fantom/' + tombFtmLpAddress;
+  const tshareChartUrl = 'https://dexscreener.com/fantom/' + tshareFtmLpAddress;
 
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
@@ -208,10 +215,10 @@ const Home = () => {
               <Button color="primary" variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
                 Buy TRACKS
               </Button>
-              <Button color="primary" href="https://dexscreener.com/fantom/0x2eb546901bab4bd01898e1c4dffd750a43f063d2" variant="contained" style={{ marginLeft: '10px', marginRight: '10px' }}>
+              <Button color="primary" href={tombChartUrl} variant="contained" style={{ marginLeft: '10px', marginRight: '10px' }}>
                 VINYL Chart
               </Button>
-              <Button color="primary" href="https://dexscreener.com/fantom/0xbd652ceeaaf498c2745b51e61921119b8b773277" variant="contained" style={{ marginRight: '10px' }}>
+              <Button color="primary" href={tshareChartUrl} variant="contained" style={{ marginRight: '10px' }}>
                 TRACKS Chart
               </Button>
             </CardContent>
