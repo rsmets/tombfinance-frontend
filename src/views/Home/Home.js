@@ -16,7 +16,8 @@ import useZap from '../../hooks/useZap';
 import useBondStats from '../../hooks/useBondStats';
 import usetShareStats from '../../hooks/usetShareStats';
 import useTotalValueLocked from '../../hooks/useTotalValueLocked';
-import { tomb as tombTesting, tShare as tShareTesting } from '../../tomb-finance/deployments/deployments.testing.json';
+// import { tomb as tombTesting, tShare as tShareTesting } from '../../tomb-finance/deployments/deployments.testing.json';
+// import { tomb as tombProd, tShare as tShareProd } from '../../tomb-finance/deployments/deployments.mainnet.json';
 import { tomb as tombProd, tShare as tShareProd } from '../../tomb-finance/deployments/deployments.mainnet.json';
 
 import MetamaskFox from '../../assets/img/metamask-fox.svg';
@@ -57,15 +58,15 @@ const Home = () => {
   const tBondStats = useBondStats();
   const tombFinance = useTombFinance();
 
-  let tomb;
-  let tShare;
-  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    tomb = tombTesting;
-    tShare = tShareTesting;
-  } else {
-    tomb = tombProd;
-    tShare = tShareProd;
-  }
+  const tomb = tombProd;
+  const tShare = tShareProd;;
+  // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  //   tomb = tombTesting;
+  //   tShare = tShareTesting;
+  // } else {
+  //   tomb = tombProd;
+  //   tShare = tShareProd;
+  // }
 
   const buyTombAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tomb.address;
   const buyTShareAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tShare.address;
