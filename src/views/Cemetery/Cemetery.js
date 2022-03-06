@@ -87,7 +87,8 @@ const Cemetery = () => {
 
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
-                    {/* Genesis Pools (1% deposit fee) start in <Countdown date={1646550951*1000} /> */}
+                  Genesis Pools (1% deposit fee)
+                    {/* start in <Countdown date={1646550951*1000} /> */}
                   </Typography>
                   {/* <Alert variant="filled" severity="warning">
                     All below pools have ended. Please unstake and collect your rewards.
