@@ -24,6 +24,8 @@ import MetamaskFox from '../../assets/img/metamask-fox.svg';
 
 import { Box, Button, Card, CardContent, Grid, Paper } from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import Countdown from 'react-countdown';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
@@ -164,6 +166,16 @@ const Home = () => {
                 Stake your VINYL-FTM LP in the Club to earn TRACKS rewards.
                 Then stake your earned TRACKS in the Studio to earn more VINYL!
               </p>
+              {/* <CountdownCircleTimer
+    isPlaying
+    duration={7}
+    colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+    colorsTime={[7, 5, 2, 0]}
+  >
+    {({ remainingTime }) => remainingTime}
+  </CountdownCircleTimer> */}
+
+{/* <Countdown date={Date.now() + 10000} /> */}
             </Box>
           </Paper>
 
