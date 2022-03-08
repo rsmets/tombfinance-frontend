@@ -176,12 +176,13 @@ const Home = () => {
 
         <Grid container spacing={3}>
     <Grid item  xs={12} sm={12} justify="center"  style={{ margin: '12px', display: 'flex' }}>
-            {/* <Alert variant="filled" severity="warning"> */}
+            <Alert variant="filled" severity="warning">
+            Vinyl Finance has not launched! Please do NOT purchase or stake any tokens as the official contracts will be deployed and renouced shortly before launch. <p>Follow us on <StyledLink target="_blank" href="https://twitter.com/vinyl_finance">Twitter</StyledLink> and join our <StyledLink target="_blank" href="https://discord.gg/VqwsjEFVzc">Discord</StyledLink> for launch updates.</p>
               {/* <b> */}
       {/* Vinyl Finance is still under construction! Please do NOT purchase or stake any tokens yet as these are not the contracts that will be used when launched. <p>Follow us on <StyledLink target="_blank" href="https://twitter.com/vinyl_finance">Twitter</StyledLink> and join our <StyledLink target="_blank" href="https://discord.gg/VqwsjEFVzc">Discord</StyledLink> for launch updates.</p> */}
       {/* Please visit our <StyledLink target="_blank" href="https://docs.vinyl.finance">documentation</StyledLink> before purchasing VINYL or TRACKS! */}
       {/* </b> */}
-            {/* </Alert> */}
+            </Alert>
         </Grid>
         </Grid>
 
