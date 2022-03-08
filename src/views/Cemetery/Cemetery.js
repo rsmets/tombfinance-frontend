@@ -45,9 +45,9 @@ const Cemetery = () => {
               <Typography color="textPrimary" align="center" variant="h3" gutterBottom>
                 Club
               </Typography>
-              <Alert variant="filled" severity="warning">
+              {/* <Alert variant="filled" severity="warning">
               Vinyl Finance is still under construction! Please do NOT purchase or stake any tokens yet as these are not the contracts that will be used when launched. <p>Follow us on <StyledLink target="_blank" href="https://twitter.com/vinyl_finance">Twitter</StyledLink> and join our <StyledLink target="_blank" href="https://discord.gg/VqwsjEFVzc">Discord</StyledLink> for launch updates.</p>
-              </Alert>
+              </Alert> */}
 
               <Box mt={5}>
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
