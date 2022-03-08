@@ -166,7 +166,7 @@ const Home = () => {
                 Stake your VINYL-FTM LP in the Club to earn TRACKS rewards.
                 Then stake your earned TRACKS in the Studio to earn more VINYL!
               </p>
-            {/* Genesis Pools start in <Countdown date={1646550951*1000} /> */}
+            <h2>Genesis Pools start in <Countdown date={1647108000*1000} /></h2>
             </Box>
           </Paper>
 
