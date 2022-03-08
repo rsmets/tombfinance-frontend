@@ -26,23 +26,27 @@ const StyledPageHeader = styled.div`
   max-width: 512px;
   width: 100%;
   margin: 0 auto;
+  font-family: 'Bungee Shade', cursive !important;
 `;
 
-const StyledTitle = styled.h1`
+const StyledTitle = styled.h3`
   color: ${(props) => props.theme.color.grey[100]};
   font-size: 36px;
   font-weight: 700;
   margin: 0;
   padding: 0;
+  font-family: 'Bungee Shade', cursive !important;
+  text-align: center;
 `;
 
-const StyledSubtitle = styled.h3`
+const StyledSubtitle = styled.h5`
   color: ${(props) => props.theme.color.grey[400]};
   font-size: 18px;
   font-weight: 400;
   margin: 0;
   padding: 0;
   text-align: center;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 `;
 
 export default PageHeader;
