@@ -160,6 +160,7 @@ const Home = () => {
           <Paper>
             <Box p={4}>
               <h2>Welcome to</h2> <h1 class="script">Vinyl Finance</h1>
+              {/* <h2 class="script">Welcome toVinyl Finance</h2> */}
               <p>The grooviest algorithmic stablecoin on Fantom Opera, pegged to the price of 1 FTM via seigniorage.</p>
               <p>
                 Stake your VINYL-FTM LP in the Club to earn TRACKS rewards.

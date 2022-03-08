@@ -39,12 +39,21 @@ body {
   background-size: cover !important;
 }
 
-h6.makeStyles-toolbarTitle-7{
+/* h6.makeStyles-toolbarTitle-7{
   font-family: 'Dancing Script', cursive !important;
 }
 
 h1.script {
   font-family: 'Dancing Script', cursive !important;
+  font-size: 3rem;
+} */
+
+h6.makeStyles-toolbarTitle-7{
+  font-family: 'Monoton', cursive !important;
+}
+
+h1.script {
+  font-family: 'Monoton', cursive !important;
   font-size: 3rem;
 }
 
@@ -53,7 +62,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Amarante', cursive;
+  font-family: 'Monoton', cursive;
 }
 
 footer .a:hover {
