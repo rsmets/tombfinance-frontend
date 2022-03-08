@@ -1,7 +1,6 @@
-// import { ChainId } from '@pancakeswap-libs/sdk';
-import { ChainId } from '@spookyswap/sdk';
 import { Configuration } from './tomb-finance/config';
 import { BankInfo } from './tomb-finance';
+import { ChainId } from '@spookyswap/sdk';
 
 const externalContractInfo = require('./tomb-finance/deployments/deployments-external.mainnet.json');
 
