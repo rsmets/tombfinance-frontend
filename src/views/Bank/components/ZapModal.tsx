@@ -81,10 +81,10 @@ const ZapModal: React.FC<ZapProps> = ({ onConfirm, onDismiss, tokenName = '', de
     <Modal>
       <ModalTitle text={`Zap in ${tokenName}`} />
       <Typography variant="h6" align="center">
-        Powered by{' '}
+        {/* Powered by{' '}
         <a target="_blank" rel="noopener noreferrer" href="https://mlnl.finance">
           mlnl.finance
-        </a>
+        </a> */}
       </Typography>
 
       <StyledActionSpacer />
@@ -101,7 +101,7 @@ const ZapModal: React.FC<ZapProps> = ({ onConfirm, onDismiss, tokenName = '', de
         <StyledMenuItem value={FTM_TICKER}>FTM</StyledMenuItem>
         <StyledMenuItem value={TSHARE_TICKER}>TRACKS</StyledMenuItem>
         {/* Tomb as an input for zapping will be disabled due to issues occuring with the Gatekeeper system */}
-        {/* <StyledMenuItem value={VINYL_TICKER}>VINYL</StyledMenuItem> */}
+        <StyledMenuItem value={VINYL_TICKER}>VINYL</StyledMenuItem>
       </Select>
       <TokenInput
         onSelectMax={handleSelectMax}
