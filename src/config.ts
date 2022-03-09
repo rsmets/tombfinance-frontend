@@ -4,6 +4,13 @@ import { ChainId } from '@spookyswap/sdk';
 
 const externalContractInfo = require('./tomb-finance/deployments/deployments-external.mainnet.json');
 
+const genPoolStartTime = 1647108000;
+const genStarted = Date.now() >= genPoolStartTime;
+const tombRewardStartTime = 1647280800;
+const tombRewardStarted = Date.now() >= tombRewardStartTime;
+const tshareRewardStartTime = 1647367200;
+const tshareRewardStarted = Date.now() >= tshareRewardStartTime;
+
 // tomb contract config
 const config: Configuration = {
   chainId: ChainId.MAINNET,
@@ -106,9 +113,9 @@ const configurations: { [env: string]: Configuration } = {
       'TOMB-FTM-LP': ['0x13Fe199F19c8F719652985488F150762A5E9c3A8', 18],
       'TSHARE-FTM-LP': ['0x20bc90bB41228cb9ab412036F80CE4Ef0cAf1BD5', 18],
     },
-    baseLaunchDate: new Date('2022-02-02 13:00:00Z'),
-    bondLaunchesAt: new Date('2022-02-03T15:00:00Z'),
-    masonryLaunchesAt: new Date('2022-02-03T00:00:00Z'),
+    baseLaunchDate: new Date('2022-03-12 18:00:00Z'),
+    bondLaunchesAt: new Date('2022-03-15T18:00:00Z'),
+    masonryLaunchesAt: new Date('2022-03-15T18:00:00Z'),
     refreshInterval: 10000,
   },
   production: {
@@ -162,7 +169,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 1,
-    closedForStaking: false,
+    closedForStaking: genStarted,
   },
   TombBooRewardPool: {
     name: 'Earn VINYL by 2OMB',
@@ -173,7 +180,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 2,
-    closedForStaking: false,
+    closedForStaking: genStarted,
   },
   TombShibaRewardPool: {
     name: 'Earn VINYL by USDC',
@@ -184,7 +191,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 3,
-    closedForStaking: false,
+    closedForStaking: genStarted,
   },
   // TombZooRewardPool: {
   //   name: 'Earn VINYL by ZOO',
@@ -206,7 +213,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 5,
-    closedForStaking: false,
+    closedForStaking: tombRewardStarted,
   },
   // TombFtmLPTombRewardPoolOld: {
   //   name: 'Earn VINYL by VINYL-FTM LP',
@@ -228,7 +235,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 6,
-    closedForStaking: false,
+    closedForStaking: tshareRewardStarted,
   },
   TshareFtmLPTShareRewardPool: {
     name: 'Earn TRACKS by TRACKS-FTM LP',
@@ -240,7 +247,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 7,
-    closedForStaking: false,
+    closedForStaking: tshareRewardStarted,
   },
 };
 
