@@ -4567,7 +4567,7 @@
         }
       ]
     },
-    "TombFtmRewardPool": {
+    "VinylFtmGenesisRewardPool": {
       "address": "0xc24D89E813172843B08E8cEDBC8b94c1e136b994",
       "abi": [
         {
@@ -5053,7 +5053,7 @@
         }
       ]
     },
-    "TombBooGenesisRewardPool": {
+    "Vinyl2ombGenesisRewardPool": {
       "address": "0xc24D89E813172843B08E8cEDBC8b94c1e136b994",
       "abi": [
         {
@@ -5539,7 +5539,7 @@
         }
       ]
     },
-    "TombZooGenesisRewardPool": {
+    "VinylUsdcGenesisRewardPool": {
       "address": "0xc24D89E813172843B08E8cEDBC8b94c1e136b994",
       "abi": [
         {
@@ -6511,7 +6511,7 @@
         }
       ]
     },
-    "TombFtmLpTombRewardPoolOld": {
+    "VinylFtmLpTombRewardPoolOld": {
       "address": "0xe9533dcb392E7050813674Ae1bAbDc78B4Bd4751",
       "abi": [
         {
@@ -7002,7 +7002,7 @@
         }
       ]
     },
-    "TombFtmLpTombRewardPool": {
+    "VinylFtmLpTombRewardPool": {
       "address": "0xe9533dcb392E7050813674Ae1bAbDc78B4Bd4751",
       "abi": [
         {
@@ -7493,7 +7493,7 @@
         }
       ]
     },
-    "TombFtmLPTShareRewardPool": {
+    "VinylFtmLPTracksRewardPool": {
       "address": "0x6eA2C6C39123d164C886982C8350278ABAE38d95",
       "abi": [
         {
@@ -7979,7 +7979,7 @@
         }
       ]
     },
-    "TshareFtmLPTShareRewardPool": {
+    "TracksFtmLPTracksRewardPool": {
       "address": "0x66d1770f2fC1342bA4abc7B62F1f53e0a3929cCF",
       "abi": [
         {

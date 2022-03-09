@@ -4567,7 +4567,7 @@
         }
       ]
     },
-    "TombFtmRewardPool": {
+    "VinylFtmGenesisRewardPool": {
       "address": "",
       "abi": [
         {
@@ -5053,7 +5053,7 @@
         }
       ]
     },
-    "TombBooGenesisRewardPool": {
+    "Vinyl2ombGenesisRewardPool": {
       "address": "",
       "abi": [
         {
@@ -5539,7 +5539,7 @@
         }
       ]
     },
-    "TombZooGenesisRewardPool": {
+    "VinylUsdcGenesisRewardPool": {
       "address": "",
       "abi": [
         {
@@ -6511,7 +6511,7 @@
         }
       ]
     },
-    "TombFtmLpTombRewardPoolOld": {
+    "VinylFtmLpTombRewardPoolOld": {
       "address": "",
       "abi": [
         {
@@ -7002,7 +7002,7 @@
         }
       ]
     },
-    "TombFtmLpTombRewardPool": {
+    "VinylFtmLpTombRewardPool": {
       "address": "",
       "abi": [
         {
@@ -7493,7 +7493,7 @@
         }
       ]
     },
-    "TombFtmLPTShareRewardPool": {
+    "VinylFtmLPTracksRewardPool": {
       "address": "",
       "abi": [
         {
@@ -7979,7 +7979,7 @@
         }
       ]
     },
-    "TshareFtmLPTShareRewardPool": {
+    "TracksFtmLPTracksRewardPool": {
       "address": "",
       "abi": [
         {

@@ -160,44 +160,47 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   finished: will disable the pool on the UI if set to true
   sort: the order of the pool
   */
-  TombFtmRewardPool: {
+  VinylFtmGenesisRewardPool: {
     name: 'Earn VINYL by FTM',
     poolId: 0,
     sectionInUI: 0,
-    contract: 'TombFtmRewardPool',
+    contract: 'VinylFtmGenesisRewardPool',
     depositTokenName: 'WFTM',
     earnTokenName: 'VINYL',
     finished: false,
     sort: 1,
-    closedForStaking: genStarted,
+    // closedForStaking: genStarted,
+    closedForStaking: false
   },
   TombBooRewardPool: {
     name: 'Earn VINYL by 2OMB',
     poolId: 1,
     sectionInUI: 0,
-    contract: 'TombBooGenesisRewardPool',
+    contract: 'Vinyl2ombGenesisRewardPool',
     depositTokenName: '2OMB',
     earnTokenName: 'VINYL',
     finished: false,
     sort: 2,
-    closedForStaking: genStarted,
+    // closedForStaking: genStarted,
+    closedForStaking: false
   },
   TombShibaRewardPool: {
     name: 'Earn VINYL by USDC',
     poolId: 2,
     sectionInUI: 0,
-    contract: 'TombShibaGenesisRewardPool',
+    contract: 'VinylUsdcGenesisRewardPool',
     depositTokenName: 'USDC',
     earnTokenName: 'VINYL',
     finished: false,
     sort: 3,
-    closedForStaking: genStarted,
+    // closedForStaking: genStarted,
+    closedForStaking: false
   },
   // TombZooRewardPool: {
   //   name: 'Earn VINYL by ZOO',
   //   poolId: 3,
   //   sectionInUI: 0,
-  //   contract: 'TombZooGenesisRewardPool',
+  //   contract: 'VinylUsdcGenesisRewardPool',
   //   depositTokenName: 'ZOO',
   //   earnTokenName: 'VINYL',
   //   finished: false,
@@ -208,46 +211,49 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     name: 'Earn VINYL by VINYL-FTM LP',
     poolId: 0,
     sectionInUI: 1,
-    contract: 'TombFtmLpTombRewardPool',
+    contract: 'VinylFtmLpTombRewardPool',
     depositTokenName: 'VINYL-FTM-LP',
     earnTokenName: 'VINYL',
     finished: false,
     sort: 5,
-    closedForStaking: tombRewardStarted,
+    // closedForStaking: tombRewardStarted,
+    closedForStaking: false
   },
   // TombFtmLPTombRewardPoolOld: {
   //   name: 'Earn VINYL by VINYL-FTM LP',
   //   poolId: 1,
   //   sectionInUI: 1,
-  //   contract: 'TombFtmLpTombRewardPoolOld',
+  //   contract: 'VinylFtmLpTombRewardPoolOld',
   //   depositTokenName: 'VINYL-FTM-LP',
   //   earnTokenName: 'VINYL',
   //   finished: true,
   //   sort: 9,
   //   closedForStaking: true,
   // },
-  TombFtmLPTShareRewardPool: {
+  VinylFtmLPTracksRewardPool: {
     name: 'Earn TRACKS by VINYL-FTM LP',
     poolId: 0,
     sectionInUI: 2,
-    contract: 'TombFtmLPTShareRewardPool',
+    contract: 'VinylFtmLPTracksRewardPool',
     depositTokenName: 'VINYL-FTM-LP',
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 6,
-    closedForStaking: tshareRewardStarted,
+    // closedForStaking: tshareRewardStarted,
+    closedForStaking: false
   },
-  TshareFtmLPTShareRewardPool: {
+  TracksFtmLPTracksRewardPool: {
     name: 'Earn TRACKS by TRACKS-FTM LP',
     poolId: 1,
     sectionInUI: 2,
-    contract: 'TshareFtmLPTShareRewardPool',
+    contract: 'TracksFtmLPTracksRewardPool',
     // depositTokenName: 'TSHARE-FTM-LP',
     depositTokenName: 'TRACKS-FTM-LP',
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 7,
-    closedForStaking: tshareRewardStarted,
+    // closedForStaking: tshareRewardStarted,
+    closedForStaking: false
   },
 };
 

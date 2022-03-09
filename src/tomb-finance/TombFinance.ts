@@ -98,11 +98,11 @@ export class TombFinance {
   //===================================================================
 
   async getTombStat(): Promise<TokenStat> {
-    const { TombFtmRewardPool, TombFtmLpTombRewardPool, TombFtmLpTombRewardPoolOld } = this.contracts;
+    const { VinylFtmGenesisRewardPool, VinylFtmLpTombRewardPool, VinylFtmLpTombRewardPoolOld } = this.contracts;
     const supply = await this.VINYL.totalSupply();
-    const tombRewardPoolSupply = await this.VINYL.balanceOf(TombFtmRewardPool.address);
-    const tombRewardPoolSupply2 = await this.VINYL.balanceOf(TombFtmLpTombRewardPool.address);
-    const tombRewardPoolSupplyOld = await this.VINYL.balanceOf(TombFtmLpTombRewardPoolOld.address);
+    const tombRewardPoolSupply = await this.VINYL.balanceOf(VinylFtmGenesisRewardPool.address);
+    const tombRewardPoolSupply2 = await this.VINYL.balanceOf(VinylFtmLpTombRewardPool.address);
+    const tombRewardPoolSupplyOld = await this.VINYL.balanceOf(VinylFtmLpTombRewardPoolOld.address);
     const tombCirculatingSupply = supply
       .sub(tombRewardPoolSupply)
       .sub(tombRewardPoolSupply2)
@@ -181,12 +181,12 @@ export class TombFinance {
    * CirculatingSupply (always equal to total supply for bonds)
    */
   async getShareStat(): Promise<TokenStat> {
-    const { TombFtmLPTShareRewardPool } = this.contracts;
+    const { VinylFtmLPTracksRewardPool } = this.contracts;
 
     const supply = await this.TRACKS.totalSupply();
 
     const priceInFTM = await this.getTokenPriceFromPancakeswap(this.TRACKS);
-    const tombRewardPoolSupply = await this.TRACKS.balanceOf(TombFtmLPTShareRewardPool.address);
+    const tombRewardPoolSupply = await this.TRACKS.balanceOf(VinylFtmLPTracksRewardPool.address);
     const tShareCirculatingSupply = supply.sub(tombRewardPoolSupply);
     const priceOfOneFTM = await this.getWFTMPriceFromPancakeswap();
     const priceOfSharesInDollars = (Number(priceInFTM) * Number(priceOfOneFTM)).toFixed(2);
@@ -200,11 +200,11 @@ export class TombFinance {
   }
 
   async getTombStatInEstimatedTWAP(): Promise<TokenStat> {
-    const { SeigniorageOracle, TombFtmRewardPool } = this.contracts;
+    const { SeigniorageOracle, VinylFtmGenesisRewardPool } = this.contracts;
     const expectedPrice = await SeigniorageOracle.twap(this.VINYL.address, ethers.utils.parseEther('1'));
 
     const supply = await this.VINYL.totalSupply();
-    const tombRewardPoolSupply = await this.VINYL.balanceOf(TombFtmRewardPool.address);
+    const tombRewardPoolSupply = await this.VINYL.balanceOf(VinylFtmGenesisRewardPool.address);
     const tombCirculatingSupply = supply.sub(tombRewardPoolSupply);
     return {
       tokenInFtm: getDisplayBalance(expectedPrice),
