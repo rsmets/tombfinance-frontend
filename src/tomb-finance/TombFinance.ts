@@ -273,24 +273,31 @@ export class TombFinance {
     poolContract: Contract,
     depositTokenName: string,
   ) {
+
+    const genPoolAlloc = 10000; // 10k tokens
+    const genPoolHrs = 72; // 72 hours
+    const THREE_DAYS = 3 * 24 * 60 * 60;
+    const ONE_DAY = 1 * 24 * 60 * 60;
+
     if (earnTokenName === 'VINYL') {
       if (!contractName.endsWith('TombRewardPool')) {
         const rewardPerSecond = await poolContract.tombPerSecond();
+        // debugger;
         if (depositTokenName === 'WFTM') {
-          return rewardPerSecond.mul(6000).div(11000).div(24);
-        } else if (depositTokenName === 'BOO') {
-          return rewardPerSecond.mul(2500).div(11000).div(24);
-        } else if (depositTokenName === 'ZOO') {
-          return rewardPerSecond.mul(1000).div(11000).div(24);
-        } else if (depositTokenName === 'SHIBA') {
-          return rewardPerSecond.mul(1500).div(11000).div(24);
+          // return rewardPerSecond.mul(1).div(genPoolAlloc).div(ONE_DAY);
+          // return rewardPerSecond.mul(1).div(genPoolAlloc).div(ONE_DAY);
+          return rewardPerSecond.mul(1).div(3).mul(THREE_DAYS);
+        } else if (depositTokenName === '2OMB') {
+          return rewardPerSecond.mul(1).div(3).div(THREE_DAYS);
+        } else if (depositTokenName === 'USDC') {
+          return rewardPerSecond.mul(1).div(3).div(THREE_DAYS);
         }
-        return rewardPerSecond.div(24);
+        return rewardPerSecond.div(genPoolHrs);
       }
       const poolStartTime = await poolContract.poolStartTime();
       const startDateTime = new Date(poolStartTime.toNumber() * 1000);
       const FOUR_DAYS = 4 * 24 * 60 * 60 * 1000;
-      if (Date.now() - startDateTime.getTime() > FOUR_DAYS) {
+      if (Date.now() - startDateTime.getTime() > ONE_DAY) {
         return await poolContract.epochTombPerSecond(1);
       }
       return await poolContract.epochTombPerSecond(0);
