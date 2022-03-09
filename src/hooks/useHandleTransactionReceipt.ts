@@ -16,7 +16,7 @@ function useHandleTransactionReceipt(): (promise: Promise<TransactionResponse>, 
             // User denied transaction signature on MetaMask.
             return;
           }
-          debugger
+          // debugger
           const message = `Unable to ${summary[0].toLowerCase()}${summary.slice(1)}`;
           console.error(`${message}: ${err.message || err.stack}`);
           addPopup({ error: { message, stack: err.message || err.stack } });
