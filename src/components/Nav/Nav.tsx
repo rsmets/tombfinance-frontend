@@ -104,14 +104,16 @@ const Nav = () => {
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
-              {/* <Link color="textPrimary" to="/club" className={classes.link}> */}
-              <Link color="textPrimary" to="/cemetery" className={classes.link}>
+              <Link color="textPrimary" to="/club" className={classes.link}>
+              {/* <Link color="textPrimary" to="/cemetery" className={classes.link}> */}
                 Club
               </Link>
-              <Link color="textPrimary" to="/masonry" className={classes.link}>
+              <Link color="textPrimary" to="/studio" className={classes.link}>
+              {/* <Link color="textPrimary" to="/masonry" className={classes.link}> */}
                 Studio
               </Link>
-              <Link color="textPrimary" to="/pit" className={classes.link}>
+              <Link color="textPrimary" to="/shop" className={classes.link}>
+              {/* <Link color="textPrimary" to="/pit" className={classes.link}> */}
                 Shop
               </Link>
               {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
@@ -163,9 +165,12 @@ const Nav = () => {
               <Divider />
               <List>
                 <ListItemLink primary="Home" to="/" />
-                <ListItemLink primary="Club" to="/cemetery" />
-                <ListItemLink primary="Studio" to="/masonry" />
-                <ListItemLink primary="Shop" to="/pit" />
+                <ListItemLink primary="Club" to="/club" />
+                {/* <ListItemLink primary="Club" to="/cemetery" /> */}
+                <ListItemLink primary="Studio" to="/studio" />
+                {/* <ListItemLink primary="Studio" to="/masonry" /> */}
+                <ListItemLink primary="Shop" to="/shop" />
+                {/* <ListItemLink primary="Shop" to="/pit" /> */}
                 {/* <ListItemLink primary="SBS" to="/sbs" />
                 <ListItemLink primary="Liquidity" to="/liquidity" />
                 <ListItemLink primary="Regulations" to="/regulations" /> */}
