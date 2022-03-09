@@ -25,6 +25,7 @@ import MetamaskFox from '../../assets/img/metamask-fox.svg';
 import { Box, Button, Card, CardContent, Grid, Paper } from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
 import Countdown from 'react-countdown';
+import KycImage from '../../assets/img/kyc.png';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
@@ -46,6 +47,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('415')]: {
       marginTop: '10px',
     },
+  },
+  kyc: {
+    height: '36px',
+    width: '144px',
+    margin: "0px 0 -0px 0px",
   },
 }));
 
@@ -161,11 +167,17 @@ const Home = () => {
             <Box p={4}>
               <h2>Welcome to</h2> <h1 class="script">Vinyl Finance</h1>
               {/* <h2 class="script">Welcome toVinyl Finance</h2> */}
+              {/* <a href="https://www.apeoclock.com/launch/vinyl-finance-genesis-pools-launch/" rel="noopener noreferrer" target="_blank" className={classes.link}>
+                <img alt="discord" src={KycImage} className={classes.kyc} />
+              </a> */}
               <p>The grooviest algorithmic stablecoin on Fantom Opera, pegged to the price of 1 FTM via seigniorage.</p>
               <p>
                 Stake your VINYL-FTM LP in the Club to earn TRACKS rewards.
                 Then stake your earned TRACKS in the Studio to earn more VINYL!
               </p>
+              <a href="https://www.apeoclock.com/launch/vinyl-finance-genesis-pools-launch/" rel="noopener noreferrer" target="_blank" className={classes.link}>
+                <img alt="discord" src={KycImage} className={classes.kyc} />
+              </a>
             <h2>Genesis Pools start in <Countdown date={1647108000*1000} /></h2>
             </Box>
           </Paper>

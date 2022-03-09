@@ -5,6 +5,7 @@ import TwitterImage from '../../assets/img/twitter.svg';
 import GithubImage from '../../assets/img/github.svg';
 import TelegramImage from '../../assets/img/telegram.svg';
 import DiscordImage from '../../assets/img/discord.svg';
+import KycImage from '../../assets/img/kyc.png';
 import YoutubeImage from '../../assets/img/youtube.svg';
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +29,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline',
     marginLeft: '20px',
   },
-
+  kyc: {
+    height: '36px',
+    width: '144px',
+    margin: "0px 0 -6px 0px",
+  },
   img: {
     width: '24px',
     height: '24px',
@@ -51,6 +56,9 @@ const Footer = () => {
             </Typography>
           </Grid>
           <Grid item xs={6} style={{ textAlign: 'right' }}>
+            <a href="https://www.apeoclock.com/launch/vinyl-finance-genesis-pools-launch/" rel="noopener noreferrer" target="_blank" className={classes.link}>
+              <img alt="discord" src={KycImage} className={classes.kyc} />
+            </a>
             <a
               href="https://twitter.com/vinyl_finance"
               rel="noopener noreferrer"
