@@ -212,15 +212,15 @@ const Home = () => {
         <Grid item xs={12} sm={8}>
           <Card style={{ height: '100%' }}>
             <CardContent align="center" style={{ marginTop: '2.5%' }}>
-              {/* <h2 style={{ marginBottom: '20px' }}>Wallet Balance</h2> */}
-              {/* <Button color="primary" href="/masonry" variant="contained" style={{ marginRight: '10px' }}> */}
-              <Button color="primary" href="/studio" variant="contained" style={{ marginRight: '10px' }}>
-                Stake Now
-              </Button>
               {/* <Button href="/club" variant="contained" style={{ marginRight: '10px' }}> */}
               {/* <Button color="primary" href="/cemetery" variant="contained" style={{ marginRight: '10px' }}> */}
               <Button color="primary" href="/club" variant="contained" style={{ marginRight: '10px' }}>
                 Farm Now
+              </Button>
+              {/* <h2 style={{ marginBottom: '20px' }}>Wallet Balance</h2> */}
+              {/* <Button color="primary" href="/masonry" variant="contained" style={{ marginRight: '10px' }}> */}
+              <Button color="primary" href="/studio" variant="contained" style={{ marginRight: '10px' }}>
+                Stake Now
               </Button>
               <Button
                 color="primary"
