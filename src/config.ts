@@ -23,9 +23,9 @@ const config: Configuration = {
   // networkName: 'Fantom Opera Testnet',
   // ftmscanUrl: 'https://testnet.ftmscan.com',
   // defaultProvider: 'https://rpc.testnet.fantom.network/',
-  deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
+  // deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
   // deployments: require('./tomb-finance/deployments/deployments.localhost.json'),
-  // deployments: require('./tomb-finance/deployments/deployments.empty.json'),
+  deployments: require('./tomb-finance/deployments/deployments.empty.json'),
   externalTokens: {
     WFTM: ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
     FUSDT: ['0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6], // This is actually usdc on mainnet not fusdt
