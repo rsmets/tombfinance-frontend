@@ -23,6 +23,9 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AccountButton from './AccountButton';
 
+import DiscordImage from '../../assets/img/discord.svg';
+import KycImage from '../../assets/img/kyc.png';
+
 const useStyles = makeStyles((theme) => ({
   '@global': {
     ul: {
@@ -50,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     flexWrap: 'wrap',
+    // margin: "0px 0 -22px 0px",
   },
   toolbarTitle: {
     fontFamily: '"Amarante", cursive',
@@ -61,10 +65,21 @@ const useStyles = makeStyles((theme) => ({
     color: '#e0e3bd',
     fontSize: '14px',
     margin: theme.spacing(1, 2),
+    // margin: "0px 0 -12px 10px",
     textDecoration: 'none',
     '&:hover': {
       textDecoration: 'none',
     },
+  },
+  kyc: {
+    height: '36px',
+    width: '144px',
+    margin: "0px 0 -12px 0px",
+  },
+  img: {
+    width: '30px',
+    height: '30px',
+    margin: "0px 0 -12px 0px",
   },
   brandLink: {
     textDecoration: 'none',
@@ -101,6 +116,9 @@ const Nav = () => {
               </Link>
             </Typography>
             <Box mr={5}>
+              {/* <a href="https://www.apeoclock.com/launch/vinyl-finance-genesis-pools-launch/" rel="noopener noreferrer" target="_blank" className={classes.link}>
+                <img alt="discord" src={KycImage} className={classes.kyc} />
+              </a> */}
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
@@ -128,6 +146,9 @@ const Nav = () => {
               <a href="https://docs.vinyl.finance" className={classes.link}>
                 Docs
               </a>
+              {/* <a href="https://discord.gg/VqwsjEFVzc" rel="noopener noreferrer" target="_blank" className={classes.link}>
+                <img alt="discord" src={DiscordImage} className={classes.img} />
+              </a> */}
             </Box>
             <AccountButton text="Connect" />
           </>
