@@ -5,15 +5,15 @@ import TwitterImage from '../../assets/img/twitter.svg';
 import GithubImage from '../../assets/img/github.svg';
 import TelegramImage from '../../assets/img/telegram.svg';
 import DiscordImage from '../../assets/img/discord.svg';
-import KycImage from '../../assets/img/kyc.png';
+import KycImage from '../../assets/img/kyc.svg';
 import YoutubeImage from '../../assets/img/youtube.svg';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
     position: 'absolute',
-    bottom: '0',
-    paddingTop: '15px',
-    paddingBottom: '15px',
+    bottom: '10',
+    paddingTop: '25px',
+    paddingBottom: '25px',
     width: '100%',
     color: 'white',
     backgroundColor: '#121212',
@@ -30,9 +30,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '20px',
   },
   kyc: {
-    height: '36px',
-    width: '144px',
-    margin: "0px 0 -6px 0px",
+    height: '40px',
+    width: '125',
+    margin: "0px 0 0 -8px 0px",
   },
   img: {
     width: '24px',

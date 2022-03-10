@@ -25,7 +25,7 @@ import MetamaskFox from '../../assets/img/metamask-fox.svg';
 import { Box, Button, Card, CardContent, Grid, Paper } from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
 import Countdown from 'react-countdown';
-import KycImage from '../../assets/img/kyc.png';
+import KycImage from '../../assets/img/kyc.svg';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   kyc: {
-    height: '36px',
-    width: '144px',
+    height: '50px',
+    width: '125',
     margin: "0px 0 -0px 0px",
   },
 }));
