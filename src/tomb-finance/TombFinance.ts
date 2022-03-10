@@ -288,8 +288,8 @@ export class TombFinance {
           // return rewardPerSecond.mul(1).div(genPoolAlloc).div(ONE_DAY);
           // return rewardPerSecond.mul(1).div(3).mul(THREE_DAYS);
         } else if (depositTokenName === '2OMB') {
-          return rewardPerSecond.mul(1).div(3).div(ONE_DAY);
-          // return rewardPerSecond.mul(1).div(THREE_DAYS);
+          // return rewardPerSecond.mul(1).div(3);
+          return rewardPerSecond.mul(1).div(THREE_DAYS);
         } else if (depositTokenName === 'USDC') {
           return rewardPerSecond.mul(1).div(3).div(ONE_DAY);
         }
@@ -305,9 +305,11 @@ export class TombFinance {
     }
     const rewardPerSecond = await (poolContract as any).tSharePerSecond();
     if (depositTokenName.startsWith('VINYL')) {
-      return rewardPerSecond.mul(35500).div(59500);
+      // return rewardPerSecond.mul(35500).div(59500);
+      return rewardPerSecond.div(2);
     } else {
-      return rewardPerSecond.mul(24000).div(59500);
+      // return rewardPerSecond.mul(24000).div(59500);
+      return rewardPerSecond.div(2);
     }
   }
 
