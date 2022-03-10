@@ -274,7 +274,7 @@ export class TombFinance {
     depositTokenName: string,
   ) {
 
-    const genPoolAlloc = 10000; // 10k tokens
+    const genPoolAlloc = 14000; // 10k tokens
     const genPoolHrs = 72; // 72 hours
     const THREE_DAYS = 3 * 24 * 60 * 60;
     const ONE_DAY = 1 * 24 * 60 * 60;
@@ -282,15 +282,16 @@ export class TombFinance {
     if (earnTokenName === 'VINYL') {
       if (!contractName.endsWith('TombRewardPool')) {
         const rewardPerSecond = await poolContract.tombPerSecond();
-        // debugger;
+        debugger;
         if (depositTokenName === 'WFTM') {
+          return rewardPerSecond.mul(1).div(3).div(ONE_DAY);
           // return rewardPerSecond.mul(1).div(genPoolAlloc).div(ONE_DAY);
-          // return rewardPerSecond.mul(1).div(genPoolAlloc).div(ONE_DAY);
-          return rewardPerSecond.mul(1).div(3).mul(THREE_DAYS);
+          // return rewardPerSecond.mul(1).div(3).mul(THREE_DAYS);
         } else if (depositTokenName === '2OMB') {
-          return rewardPerSecond.mul(1).div(3).div(THREE_DAYS);
+          return rewardPerSecond.mul(1).div(3).div(ONE_DAY);
+          // return rewardPerSecond.mul(1).div(THREE_DAYS);
         } else if (depositTokenName === 'USDC') {
-          return rewardPerSecond.mul(1).div(3).div(THREE_DAYS);
+          return rewardPerSecond.mul(1).div(3).div(ONE_DAY);
         }
         return rewardPerSecond.div(genPoolHrs);
       }
