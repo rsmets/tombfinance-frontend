@@ -5,13 +5,13 @@ import TwitterImage from '../../assets/img/twitter.svg';
 import GithubImage from '../../assets/img/github.svg';
 import TelegramImage from '../../assets/img/telegram.svg';
 import DiscordImage from '../../assets/img/discord.svg';
-import KycImage from '../../assets/img/kyc.svg';
+import KycImage from '../../assets/img/kyc4.svg';
 import YoutubeImage from '../../assets/img/youtube.svg';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
     position: 'absolute',
-    bottom: '10',
+    bottom: '0',
     paddingTop: '25px',
     paddingBottom: '25px',
     width: '100%',
