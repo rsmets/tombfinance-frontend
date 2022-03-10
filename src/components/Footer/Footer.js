@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
   },
   kyc: {
     height: '40px',
-    width: '125',
-    margin: "0px 0 0 -8px 0px",
+    width: '100px',
+    margin: "0px 0px -3px 0px",
   },
   img: {
     width: '24px',
