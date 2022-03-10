@@ -24,6 +24,7 @@ const config: Configuration = {
   // ftmscanUrl: 'https://testnet.ftmscan.com',
   // defaultProvider: 'https://rpc.testnet.fantom.network/',
   // deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
+  // deployments: require('./tomb-finance/deployments/deployments.localhost.json'),
   deployments: require('./tomb-finance/deployments/deployments.empty.json'),
   externalTokens: {
     WFTM: ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
@@ -169,8 +170,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 1,
-    // closedForStaking: genStarted,
-    closedForStaking: false
+    closedForStaking: genStarted,
+    // closedForStaking: false
   },
   TombBooRewardPool: {
     name: 'Earn VINYL by 2OMB',
@@ -181,8 +182,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 2,
-    // closedForStaking: genStarted,
-    closedForStaking: false
+    closedForStaking: genStarted,
+    // closedForStaking: false
   },
   TombShibaRewardPool: {
     name: 'Earn VINYL by USDC',
@@ -193,8 +194,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 3,
-    // closedForStaking: genStarted,
-    closedForStaking: false
+    closedForStaking: genStarted,
+    // closedForStaking: false
   },
   // TombZooRewardPool: {
   //   name: 'Earn VINYL by ZOO',
@@ -216,8 +217,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 5,
-    // closedForStaking: tombRewardStarted,
-    closedForStaking: false
+    closedForStaking: tombRewardStarted,
+    // closedForStaking: false
   },
   // TombFtmLPTombRewardPoolOld: {
   //   name: 'Earn VINYL by VINYL-FTM LP',
@@ -239,8 +240,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 6,
-    // closedForStaking: tshareRewardStarted,
-    closedForStaking: false
+    closedForStaking: tshareRewardStarted,
+    // closedForStaking: false
   },
   TracksFtmLPTracksRewardPool: {
     name: 'Earn TRACKS by TRACKS-FTM LP',
@@ -252,8 +253,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 7,
-    // closedForStaking: tshareRewardStarted,
-    closedForStaking: false
+    closedForStaking: tshareRewardStarted,
+    // closedForStaking: false
   },
 };
 
