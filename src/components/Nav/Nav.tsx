@@ -143,7 +143,7 @@ const Nav = () => {
               <Link color="textPrimary" to="/regulations" className={classes.link}>
                 Regulations
               </Link> */}
-              <a href="https://docs.vinyl.finance" className={classes.link}>
+              <a href="https://docs.vinyl.finance" target="_blank" className={classes.link}>
                 Docs
               </a>
               {/* <a href="https://discord.gg/VqwsjEFVzc" rel="noopener noreferrer" target="_blank" className={classes.link}>
