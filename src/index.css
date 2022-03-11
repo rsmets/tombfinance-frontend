@@ -51,10 +51,12 @@ h1.script {
 
 h6.makeStyles-toolbarTitle-7{
   font-family: 'Bungee Shade', cursive !important;
+  /* font-family: 'Monoton', cursive !important; */
 }
 
 h1.script {
   font-family: 'Bungee Shade', cursive !important;
+  /* font-family: 'Monoton', cursive !important; */
   font-size: 3rem;
 }
 
@@ -65,6 +67,7 @@ h4,
 /* h5, */
 h6 {
   font-family: 'Bungee Shade', cursive !important;
+  /* font-family: 'Monoton', cursive !important; */
 }
 
 footer .a:hover {
