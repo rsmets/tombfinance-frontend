@@ -232,13 +232,13 @@ const Home = () => {
               >
                 Buy VINYL
               </Button>
-              <Button color="primary" variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
+              <Button color="primary" variant="contained" target="_blank" href={buyTShareAddress} className={classes.button} style={{ marginRight: '10px' }}>
                 Buy TRACKS
               </Button>
-              <Button color="primary" href={tombChartUrl} variant="contained" style={{ marginLeft: '10px', marginRight: '10px' }}>
+              <Button color="primary" href={tombChartUrl} variant="contained" className={classes.button} style={{ marginRight: '10px' }}>
                 VINYL Chart
               </Button>
-              <Button color="primary" href={tshareChartUrl} variant="contained" style={{ marginRight: '10px' }}>
+              <Button color="primary" href={tshareChartUrl} variant="contained" className={classes.button}>
                 TRACKS Chart
               </Button>
             </CardContent>
