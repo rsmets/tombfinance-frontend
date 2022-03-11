@@ -12,6 +12,7 @@ import Page from '../../components/Page';
 import CemeteryCard from './CemeteryCard';
 import CemeteryImage from '../../assets/img/cemetery.png';
 import { createGlobalStyle } from 'styled-components';
+import { genPoolStartTime, genFinishedTime, isGenFinished, tombRewardStartTime, tombRewardFinishedTime, isTombRewardFinished, tshareRewardStartTime } from '../../config';
 
 import Countdown from 'react-countdown';
 
@@ -54,7 +55,7 @@ const Cemetery = () => {
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom>
                     Earn TRACKS by staking LP
-                    <h4>start in <Countdown date={1647367200*1000} /></h4>
+                    <h6>starts in <Countdown date={tshareRewardStartTime*1000} /></h6>
                   </Typography>
                   <Grid container spacing={3}>
                     {activeBanks
@@ -70,12 +71,16 @@ const Cemetery = () => {
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 1).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     Earn VINYL by staking LP
-                    <h4>start in <Countdown date={1647280800*1000} /></h4>
+                    {/* <h4>start in <Countdown date={1647194400*1000} /></h4> */}
+                    <h6>starts in <Countdown date={tombRewardStartTime*1000} /></h6>
+                    <h6>ends in <Countdown date={tombRewardFinishedTime*1000} /></h6>
                   </Typography>
-                  {/* <Alert variant="filled" severity="warning">
-                    All below pools have ended. Please unstake and collect your rewards.
-                  </Alert> */}
-                  <Grid container spacing={3} style={{ marginTop: '20px' }}>
+                  {isTombRewardFinished ? 
+                      <Alert variant="filled" severity="warning">
+                        VINYL Reward Pool has ended please remove your staked VINYL/FTM LP and move into the TRACKS Reward Pool.
+                      </Alert> : ''
+                  }
+                  <Grid container spacing={3}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 1)
                       .map((bank) => (
@@ -89,11 +94,15 @@ const Cemetery = () => {
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                   Genesis Pools (1% deposit fee)
-                    <h4>start in <Countdown date={1647108000*1000} /></h4>
+                  
+                    <h6>starts in <Countdown date={genPoolStartTime*1000} /></h6>
+                    <h6>ends in <Countdown date={(genFinishedTime)*1000} /></h6>
                   </Typography>
-                  {/* <Alert variant="filled" severity="warning">
-                    All below pools have ended. Please unstake and collect your rewards.
-                  </Alert> */}
+                  {isGenFinished ? 
+                      <Alert variant="filled" severity="warning">
+                        Genesis Pools have ended please remove your staked tokens and form an LP.
+                      </Alert> : ''
+                  }
                   <Grid container spacing={3}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 0)

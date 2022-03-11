@@ -3,13 +3,24 @@ import { BankInfo } from './tomb-finance';
 import { ChainId } from '@spookyswap/sdk';
 
 const externalContractInfo = require('./tomb-finance/deployments/deployments-external.mainnet.json');
+// const externalContractInfo = require('./tomb-finance/deployments/deployments-external.mainnet-2.json');
 
-const genPoolStartTime = 1247108000;
-const genStarted = Date.now() < genPoolStartTime;
-const tombRewardStartTime = 1247280800;
-const tombRewardStarted = Date.now() < tombRewardStartTime;
-const tshareRewardStartTime = 1247367200;
-const tshareRewardStarted = Math.floor(Date.now()/1000) < tshareRewardStartTime;
+const now = Math.floor(Date.now() / 1000);
+
+export const genPoolStartTime = 1647108000;
+export const genFinishedTime = genPoolStartTime + (60 * 60 * 24 * 3);
+export const isGenFinished = now >= genFinishedTime;
+export const isGenStarted = now >= genPoolStartTime;
+export const isGenRunning = !isGenFinished && isGenStarted;
+
+export const tombRewardStartTime = 1647194400;
+export const tombRewardFinishedTime = tombRewardStartTime + (60 * 60 * 24 * 4);
+export const isTombRewardFinished = now >= tombRewardFinishedTime;
+export const isTombRewardStarted = now >= tombRewardStartTime;
+export const isTombRewardRunning = !isTombRewardFinished && isTombRewardStarted;
+
+export const tshareRewardStartTime = 1647367200;
+export const tshareRewardsRunning = now >= tshareRewardStartTime;
 
 // tomb contract config
 const config: Configuration = {
@@ -24,6 +35,7 @@ const config: Configuration = {
   // ftmscanUrl: 'https://testnet.ftmscan.com',
   // defaultProvider: 'https://rpc.testnet.fantom.network/',
   // deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
+  // deployments: require('./tomb-finance/deployments/deployments.mainnet-2.json'),
   // deployments: require('./tomb-finance/deployments/deployments.localhost.json'),
   deployments: require('./tomb-finance/deployments/deployments.empty.json'),
   externalTokens: {
@@ -170,7 +182,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 1,
-    closedForStaking: genStarted,
+    closedForStaking: !isGenRunning,
     // closedForStaking: false
   },
   TombBooRewardPool: {
@@ -182,7 +194,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 2,
-    closedForStaking: genStarted,
+    closedForStaking: !isGenRunning,
     // closedForStaking: false
   },
   TombShibaRewardPool: {
@@ -194,7 +206,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 3,
-    closedForStaking: genStarted,
+    closedForStaking: !isGenRunning,
     // closedForStaking: false
   },
   // TombZooRewardPool: {
@@ -217,7 +229,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 5,
-    closedForStaking: tombRewardStarted,
+    closedForStaking: !isTombRewardRunning,
     // closedForStaking: false
   },
   // TombFtmLPTombRewardPoolOld: {
@@ -240,7 +252,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 6,
-    closedForStaking: tshareRewardStarted,
+    closedForStaking: !tshareRewardsRunning,
     // closedForStaking: false
   },
   TracksFtmLPTracksRewardPool: {
@@ -253,7 +265,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'TRACKS',
     finished: false,
     sort: 7,
-    closedForStaking: tshareRewardStarted,
+    closedForStaking: !tshareRewardsRunning,
     // closedForStaking: false
   },
 };
