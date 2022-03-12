@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     position: 'absolute',
     bottom: '0',
-    paddingTop: '25px',
-    paddingBottom: '25px',
+    paddingTop: '23px',
+    paddingBottom: '23px',
     width: '100%',
     color: 'white',
     backgroundColor: '#121212',
