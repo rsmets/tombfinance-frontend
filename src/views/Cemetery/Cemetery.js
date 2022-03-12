@@ -48,7 +48,8 @@ const Cemetery = () => {
               </Typography>
               <Alert variant="filled" severity="warning">
               {/* Vinyl Finance is still under construction! Please do NOT purchase or stake any tokens yet as these are not the contracts that will be used when launched. <p>Follow us on <StyledLink target="_blank" href="https://twitter.com/vinyl_finance">Twitter</StyledLink> and join our <StyledLink target="_blank" href="https://discord.gg/VqwsjEFVzc">Discord</StyledLink> for launch updates.</p> */}
-              Vinyl Finance has not launched! Please do NOT purchase or stake any tokens as the official contracts will be deployed and renouced shortly before launch. <p>Follow us on <StyledLink target="_blank" href="https://twitter.com/vinyl_finance">Twitter</StyledLink> and join our <StyledLink target="_blank" href="https://discord.gg/VqwsjEFVzc">Discord</StyledLink> for launch updates.</p>
+              {/* Vinyl Finance has not launched! Please do NOT purchase or stake any tokens as the official contracts will be deployed and renounced shortly before launch. <p>Follow us on <StyledLink target="_blank" href="https://twitter.com/vinyl_finance">Twitter</StyledLink> and join our <StyledLink target="_blank" href="https://discord.gg/VqwsjEFVzc">Discord</StyledLink> for launch updates.</p> */}
+              Vinyl Finance has not launched! But will very soon. Final contracts are deployed and token contracts are <StyledLink target="_blank" href="https://docs.vinyl.finance/protocol-info/contracts">renounced</StyledLink>. <p>Follow us on <StyledLink target="_blank" href="https://twitter.com/vinyl_finance">Twitter</StyledLink> and join our <StyledLink target="_blank" href="https://discord.gg/VqwsjEFVzc">Discord</StyledLink> for launch updates.</p>
               </Alert>
 
               <Box mt={5}>
