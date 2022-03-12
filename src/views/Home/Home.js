@@ -178,7 +178,8 @@ const Home = () => {
               <a href="https://www.apeoclock.com/launch/vinyl-finance-genesis-pools-launch/" rel="noopener noreferrer" target="_blank" className={classes.link}>
                 <img alt="discord" src={KycImage} className={classes.kyc} />
               </a>
-            <h2>Genesis Pools start in <Countdown date={1647108000*1000} /></h2>
+            <h2>Genesis Pools end in <Countdown date={1647367200*1000} /></h2>
+            Full protocol launch then! Catch you in the Club.
             </Box>
           </Paper>
 
