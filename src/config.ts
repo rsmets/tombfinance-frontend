@@ -3,24 +3,24 @@ import { BankInfo } from './tomb-finance';
 import { ChainId } from '@spookyswap/sdk';
 
 const externalContractInfo = require('./tomb-finance/deployments/deployments-external.mainnet.json');
-// const externalContractInfo = require('./tomb-finance/deployments/deployments-external.mainnet-2.json');
+// const externalContractInfo = require('./tomb-finance/deployments/deployments-external.mainnet-4.json');
 
 const now = Math.floor(Date.now() / 1000);
 
-export const genPoolStartTime = 1647108000;
+export const genPoolStartTime = 1647108000; // Sat Mar 12 2022 10:00:00 UTC-0800 (Pacific Standard Time)
 export const genFinishedTime = genPoolStartTime + (60 * 60 * 24 * 3);
 export const isGenFinished = now >= genFinishedTime;
 export const isGenStarted = now >= genPoolStartTime;
-export const isGenRunning = !isGenFinished && isGenStarted;
+export const isGenRunning = true || !isGenFinished && isGenStarted;
 
-export const tombRewardStartTime = 1647194400;
+export const tombRewardStartTime = 1647111600;
 export const tombRewardFinishedTime = tombRewardStartTime + (60 * 60 * 24 * 4);
 export const isTombRewardFinished = now >= tombRewardFinishedTime;
 export const isTombRewardStarted = now >= tombRewardStartTime;
-export const isTombRewardRunning = !isTombRewardFinished && isTombRewardStarted;
+export const isTombRewardRunning = true || !isTombRewardFinished && isTombRewardStarted;
 
 export const tshareRewardStartTime = 1647367200;
-export const tshareRewardsRunning = now >= tshareRewardStartTime;
+export const tshareRewardsRunning = true || now >= tshareRewardStartTime;
 
 // tomb contract config
 const config: Configuration = {
@@ -34,10 +34,11 @@ const config: Configuration = {
   // networkName: 'Fantom Opera Testnet',
   // ftmscanUrl: 'https://testnet.ftmscan.com',
   // defaultProvider: 'https://rpc.testnet.fantom.network/',
-  // deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
+  deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
   // deployments: require('./tomb-finance/deployments/deployments.mainnet-2.json'),
+  // deployments: require('./tomb-finance/deployments/deployments.mainnet-4.json'),
   // deployments: require('./tomb-finance/deployments/deployments.localhost.json'),
-  deployments: require('./tomb-finance/deployments/deployments.empty.json'),
+  // deployments: require('./tomb-finance/deployments/deployments.empty.json'),
   externalTokens: {
     WFTM: ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
     FUSDT: ['0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6], // This is actually usdc on mainnet not fusdt
