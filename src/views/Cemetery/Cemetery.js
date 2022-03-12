@@ -73,7 +73,7 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     Earn VINYL by staking LP
                     {/* <h4>start in <Countdown date={1647194400*1000} /></h4> */}
-                    <h6>starts in <Countdown date={tombRewardStartTime*1000} /></h6>
+                    <h6>ends in <Countdown date={tombRewardFinishedTime*1000} /></h6>
                     {/* <h6>ends in <Countdown date={tombRewardFinishedTime*1000} /></h6> */}
                   </Typography>
                   {isTombRewardFinished ? 
@@ -96,7 +96,7 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                   Genesis Pools (1% deposit fee)
                   
-                    <h6>starts in <Countdown date={genPoolStartTime*1000} /></h6>
+                    <h6>ends in <Countdown date={genFinishedTime*1000} /></h6>
                     {/* <h6>ends in <Countdown date={(genFinishedTime)*1000} /></h6> */}
                   </Typography>
                   {isGenFinished ? 
