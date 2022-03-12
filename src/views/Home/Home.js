@@ -175,6 +175,13 @@ const Home = () => {
                 Stake your VINYL-FTM LP in the Club to earn TRACKS rewards.
                 Then stake your earned TRACKS in the Studio to earn more VINYL!
               </p>
+              <p>
+              All token contracts are&nbsp;
+                <a href="https://docs.vinyl.finance/protocol-info/contracts" target="_blank" className={classes.link}
+                >
+                   renounced!
+                </a>
+              </p>
               <a href="https://www.apeoclock.com/launch/vinyl-finance-genesis-pools-launch/" rel="noopener noreferrer" target="_blank" className={classes.link}>
                 <img alt="discord" src={KycImage} className={classes.kyc} />
               </a>
