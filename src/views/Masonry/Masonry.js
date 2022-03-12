@@ -116,7 +116,7 @@ const Masonry = () => {
             <Grid container justify="center">
               <Box mt={3} style={{ width: '600px' }}>
                 <Alert variant="filled" severity="warning">
-                  Staked TRACKS can only be withdrawn after 3 epochs, 18 hrs, since deposit.
+                  Staked TRACKS can be withdrawn after 4 epochs, 24 hrs, since deposit. Rewards can be claimed after 2 epochs, 12 hrs. Please note that upon claiming rewards the lock up withdrawal timer is reset. 
                 </Alert>
               </Box>
             </Grid>
