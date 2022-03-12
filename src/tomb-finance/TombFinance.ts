@@ -301,9 +301,9 @@ export class TombFinance {
       const FOUR_DAYS = 4 * 24 * 60 * 60 * 1000;
       if (Date.now() - startDateTime.getTime() > ONE_DAY) {
         const v = await poolContract.epochTombPerSecond(1);
-        debugger;
-        const vn = v.div(2)
-        debugger;
+        // debugger;
+        const vn = v.div(4)
+        // debugger;
         return vn;
       }
       return await poolContract.epochTombPerSecond(0);
