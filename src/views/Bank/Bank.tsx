@@ -50,7 +50,7 @@ const Bank: React.FC = () => {
             <Card className={classes.gridItem}>
               <CardContent style={{ textAlign: 'center' }}>
                 <Typography>APR</Typography>
-                <Typography>{bank.closedForStaking ? '0.00' : statsOnPool?.yearlyAPR}%</Typography>
+                <Typography>{bank.aprZero ? '0.00' : statsOnPool?.yearlyAPR}%</Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -58,7 +58,7 @@ const Bank: React.FC = () => {
             <Card className={classes.gridItem}>
               <CardContent style={{ textAlign: 'center' }}>
                 <Typography>Daily APR</Typography>
-                <Typography>{bank.closedForStaking ? '0.00' : statsOnPool?.dailyAPR}%</Typography>
+                <Typography>{bank.aprZero ? '0.00' : statsOnPool?.dailyAPR}%</Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -72,9 +72,9 @@ const Bank: React.FC = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box mt={5}>
-      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. Please move your VINYL/FTM LP into the TRACKS reward in preparation for its start!</Alert> : ''}
-      </Box>
+      {/* <Box mt={5}>
+      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. Please move your VINYL/FTM LP into the TRACKS reward in preparation for its start! Note: by withdrawing you also claim any pending rewards =)</Alert> : ''}
+      </Box> */}
       <Box mt={5}>
         <StyledBank>
           <StyledCardsWrapper>
