@@ -230,7 +230,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 5,
-    closedForStaking: !isTombRewardRunning,
+    closedForStaking: true,
     // closedForStaking: false
   },
   // TombFtmLPTombRewardPoolOld: {

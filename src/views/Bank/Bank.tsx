@@ -17,6 +17,7 @@ import useStatsForPool from '../../hooks/useStatsForPool';
 import useRedeem from '../../hooks/useRedeem';
 import { Bank as BankEntity } from '../../tomb-finance';
 import useTombFinance from '../../hooks/useTombFinance';
+import { Alert } from '@material-ui/lab';
 
 const useStyles = makeStyles((theme) => ({
   gridItem: {
@@ -70,6 +71,9 @@ const Bank: React.FC = () => {
             </Card>
           </Grid>
         </Grid>
+      </Box>
+      <Box mt={5}>
+      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. Please move your VINYL/FTM LP into the TRACKS reward in preparation for its start!</Alert> : ''}
       </Box>
       <Box mt={5}>
         <StyledBank>

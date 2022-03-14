@@ -73,7 +73,8 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     Earn VINYL by staking LP
                     {/* <h4>start in <Countdown date={1647194400*1000} /></h4> */}
-                    <h6>ends in <Countdown date={tombRewardFinishedTime*1000} /></h6>
+                    {/* <h6>ends in <Countdown date={tombRewardFinishedTime*1000} /></h6> */}
+                    <h6>This reward pool has ended.</h6>
                     {/* <h6>ends in <Countdown date={tombRewardFinishedTime*1000} /></h6> */}
                   </Typography>
                   {isTombRewardFinished ? 
