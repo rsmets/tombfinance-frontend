@@ -284,18 +284,18 @@ export class TombFinance {
         const rewardPerSecond = await poolContract.tombPerSecond();
         debugger;
         if (depositTokenName === 'WFTM') {
-          return rewardPerSecond.mul(1).mul(1000).div(2100);
+          return rewardPerSecond.mul(1).mul(1000).div(2050);
           // return rewardPerSecond.mul(1).mul(1000).div(2500);
           // return rewardPerSecond.mul(1).div(genPoolAlloc).div(ONE_DAY);
           // return rewardPerSecond.mul(1).div(3).mul(THREE_DAYS);
         } else if (depositTokenName === '2OMB') {
           // return rewardPerSecond.mul(1).mul(500).div(2500);
-          return rewardPerSecond.mul(1).mul(100).div(2100);
+          return rewardPerSecond.mul(1).mul(50).div(2050);
           // return rewardPerSecond.mul(1).div(THREE_DAYS);
         } else if (depositTokenName === 'USDC') {
           // return rewardPerSecond.mul(1).div(3).div(ONE_DAY);
           // return rewardPerSecond.mul(1).mul(1000).div(2500);
-          return rewardPerSecond.mul(1).mul(1000).div(2100);
+          return rewardPerSecond.mul(1).mul(1000).div(2050);
         }
         return rewardPerSecond.div(genPoolHrs);
       }
@@ -305,7 +305,8 @@ export class TombFinance {
       if (Date.now() - startDateTime.getTime() > ONE_DAY) {
         const v = await poolContract.epochTombPerSecond(1);
         // debugger;
-        const vn = v.div(60)
+        // const vn = v.div(150)
+        const vn = v.div(90);
         // debugger;
         return vn;
       }
