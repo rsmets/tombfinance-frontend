@@ -73,7 +73,7 @@ const Bank: React.FC = () => {
         </Grid>
       </Box>
       <Box mt={5}>
-      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. There are is no more VINYL to give. Please move your VINYL/FTM LP into the TRACKS <a href="/club/VinylFtmLPTracksRewardPool">reward pool</a> in preparation for its start!</Alert> : ''}
+      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. There are is no more VINYL to give. Please move your VINYL/FTM LP into the <a href="/club/VinylFtmLPTracksRewardPool">TRACKS reward pool</a> in preparation for its start!</Alert> : ''}
       </Box>
       <Box mt={5}>
         <StyledBank>
