@@ -72,9 +72,9 @@ const Bank: React.FC = () => {
           </Grid>
         </Grid>
       </Box>
-      {/* <Box mt={5}>
-      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. Please move your VINYL/FTM LP into the TRACKS reward in preparation for its start! Note: by withdrawing you also claim any pending rewards =)</Alert> : ''}
-      </Box> */}
+      <Box mt={5}>
+      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. There are is no more VINYL to give. Please move your VINYL/FTM LP into the TRACKS <a href="/club/VinylFtmLPTracksRewardPool">reward pool</a> in preparation for its start!</Alert> : ''}
+      </Box>
       <Box mt={5}>
         <StyledBank>
           <StyledCardsWrapper>
