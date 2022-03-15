@@ -73,7 +73,9 @@ const Bank: React.FC = () => {
         </Grid>
       </Box>
       <Box mt={5}>
-      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. There are is no more VINYL to give. Please move your VINYL/FTM LP into the <a href="/club/VinylFtmLPTracksRewardPool">TRACKS reward pool</a> in preparation for its start!</Alert> : ''}
+      {bank.closedForStaking ? <Alert variant="filled" severity="warning">This pool's rewards have ended. There are is no more VINYL to distribute. But TRACKS <a href="/club/VinylFtmLPTracksRewardPool">VINYL/FTM</a>  and <a href="/club/TracksFtmLPTracksRewardPool">TRACKS/FTM</a> reward pools are piping hot. Check 'em out!
+       </Alert> 
+       : ''}
       </Box>
       <Box mt={5}>
         <StyledBank>

@@ -15,7 +15,7 @@ export const isGenRunning = true || !isGenFinished && isGenStarted;
 
 export const tombRewardStartTime = 1647111600;
 export const tombRewardFinishedTime = tombRewardStartTime + (60 * 60 * 24 * 4);
-export const isTombRewardFinished = now >= tombRewardFinishedTime;
+export const isTombRewardFinished = true //now >= tombRewardFinishedTime;
 export const isTombRewardStarted = now >= tombRewardStartTime;
 export const isTombRewardRunning = true || !isTombRewardFinished && isTombRewardStarted;
 
@@ -183,7 +183,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 1,
-    closedForStaking: false //!isGenRunning,
+    // closedForStaking: !isGenRunning,
+    closedForStaking: true
     // closedForStaking: false
   },
   TombBooRewardPool: {
@@ -195,8 +196,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 2,
-    closedForStaking: false //!isGenRunning,
-    // closedForStaking: false
+    // closedForStaking: !isGenRunning,
+    closedForStaking: true
   },
   TombShibaRewardPool: {
     name: 'Earn VINYL by USDC',
@@ -207,8 +208,8 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 3,
-    closedForStaking: false //!isGenRunning,
-    // closedForStaking: false
+    // closedForStaking: !isGenRunning,
+    closedForStaking: true
   },
   // TombZooRewardPool: {
   //   name: 'Earn VINYL by ZOO',

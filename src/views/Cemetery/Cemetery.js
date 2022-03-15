@@ -56,7 +56,7 @@ const Cemetery = () => {
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom>
                     Earn TRACKS by staking LP
-                    <h6>starts in <Countdown date={tshareRewardStartTime*1000} /></h6>
+                    {/* <h6>starts in <Countdown date={tshareRewardStartTime*1000} /></h6> */}
                   </Typography>
                   <Grid container spacing={3}>
                     {activeBanks
@@ -76,12 +76,18 @@ const Cemetery = () => {
                     {/* <h6>ends in <Countdown date={tombRewardFinishedTime*1000} /></h6> */}
                     <h6>This reward pool has ended.</h6>
                     {/* <h6>ends in <Countdown date={tombRewardFinishedTime*1000} /></h6> */}
+                    {/* {isTombRewardFinished ? 
+                      <Alert variant="filled" severity="warning">
+                        Genesis Pools have ended please remove your staked tokens and form an LP for pipe'n hot TRACKS.
+                      </Alert> : ''
+                      // 'This reward pool has ended.' :``
+                    } */}
                   </Typography>
-                  {isTombRewardFinished ? 
+                  {/* {isTombRewardFinished ? 
                       <Alert variant="filled" severity="warning">
                         VINYL Reward Pool has ended please remove your staked VINYL/FTM LP and move into the TRACKS Reward Pool.
                       </Alert> : ''
-                  }
+                  } */}
                   <Grid container spacing={3}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 1)
@@ -97,14 +103,16 @@ const Cemetery = () => {
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                   Genesis Pools (1% deposit fee)
                   
-                    <h6>ends in <Countdown date={genFinishedTime*1000} /></h6>
+                    {/* <h6>ends in <Countdown date={genFinishedTime*1000} /></h6> */}
+                    <h6>This reward pool has ended.</h6>
                     {/* <h6>ends in <Countdown date={(genFinishedTime)*1000} /></h6> */}
                   </Typography>
-                  {isGenFinished ? 
+                  {/* {isGenFinished ? 
                       <Alert variant="filled" severity="warning">
-                        Genesis Pools have ended please remove your staked tokens and form an LP.
+                        Genesis Pools have ended please remove your staked tokens and form an LP for pipe'n hot TRACKS.
                       </Alert> : ''
-                  }
+                      // 'This reward pool has ended.' :``
+                  } */}
                   <Grid container spacing={3}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 0)
