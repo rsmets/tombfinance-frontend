@@ -183,7 +183,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 1,
-    closedForStaking: !isGenRunning,
+    closedForStaking: false //!isGenRunning,
     // closedForStaking: false
   },
   TombBooRewardPool: {
@@ -195,7 +195,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 2,
-    closedForStaking: !isGenRunning,
+    closedForStaking: false //!isGenRunning,
     // closedForStaking: false
   },
   TombShibaRewardPool: {
@@ -207,7 +207,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'VINYL',
     finished: false,
     sort: 3,
-    closedForStaking: !isGenRunning,
+    closedForStaking: false //!isGenRunning,
     // closedForStaking: false
   },
   // TombZooRewardPool: {
