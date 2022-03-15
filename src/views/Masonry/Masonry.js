@@ -116,7 +116,9 @@ const Masonry = () => {
             <Grid container justify="center">
               <Box mt={3} style={{ width: '600px' }}>
                 <Alert variant="filled" severity="warning">
-                  The Studio only allocates VINYL awards at the start of the epoch. Depositing TRACKS mid epoch will not get any rewards for that epoch, however will be locked in for the lump sum reward allocation at the start of the next epoch. <p></p> Staked TRACKS can be withdrawn after 4 epochs, 24 hrs, since deposit. Rewards can be claimed after 2 epochs, 12 hrs. Please note that upon claiming rewards the lock up withdrawal timer is reset. 
+                  The Studio only allocates VINYL awards at the start of the epoch. Depositing TRACKS mid epoch will not get any rewards for that epoch, however will be locked in for the lump sum reward allocation at the start of the next epoch. 
+                  <p></p> 
+                  Staked TRACKS can be withdrawn after 4 epochs, 24 hrs, since deposit. Rewards can be claimed after 2 epochs, 12 hrs. Please note that upon claiming rewards the lock up withdrawal timer is reset. 
                 </Alert>
               </Box>
             </Grid>
