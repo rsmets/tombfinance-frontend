@@ -314,11 +314,13 @@ export class TombFinance {
     }
     const rewardPerSecond = await (poolContract as any).tSharePerSecond();
     if (depositTokenName.startsWith('VINYL')) {
+      return rewardPerSecond.mul(1500).div(2000);
       // return rewardPerSecond.mul(35500).div(59500);
-      return rewardPerSecond.div(2);
+      // return rewardPerSecond.div(2);
     } else {
+      return rewardPerSecond.mul(500).div(2000);
       // return rewardPerSecond.mul(24000).div(59500);
-      return rewardPerSecond.div(2);
+      // return rewardPerSecond.div(2);
     }
   }
 
