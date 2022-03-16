@@ -77,8 +77,8 @@ const Home = () => {
 
   const buyTombAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tomb.address;
   const buyTShareAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tShare.address;
-  const tombChartUrl = 'https://dexscreener.com/fantom/' + tombFtmLpAddress;
-  const tshareChartUrl = 'https://dexscreener.com/fantom/' + tshareFtmLpAddress;
+  const tombChartUrl = 'https://www.defined.fi/ftm/' + tombFtmLpAddress;
+  const tshareChartUrl = 'https://www.defined.fi/ftm/' + tshareFtmLpAddress;
 
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
