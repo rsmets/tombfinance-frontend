@@ -18,6 +18,7 @@ import useTokenBalance from '../../hooks/useTokenBalance';
 import useBondsPurchasable from '../../hooks/useBondsPurchasable';
 import { getDisplayBalance } from '../../utils/formatBalance';
 import { BOND_REDEEM_PRICE, BOND_REDEEM_PRICE_BN } from '../../tomb-finance/constants';
+import { Alert } from '@material-ui/lab';
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -66,9 +67,17 @@ const Pit: React.FC = () => {
           <>
             <Route exact path={path}>
               <PageHeader icon={'🏦'} title="Buy & Redeem CDs, aka Bonds" subtitle="Earn premiums upon redemption" />
+              <Alert variant="filled" severity="warning">
+              Bonds are not purchasable during first 18 epochs of treasury bootstrap expansion.
+                </Alert>
             </Route>
             <StyledBond>
               <StyledCardWrapper>
+                {/* {bootstrapped ? 
+                  <Alert variant="filled" severity="warning">Bonds are not purchasable during first 18 epochs of bootstrap</Alert>
+                  :
+                  ''
+                } */}
                 <ExchangeCard
                   action="Purchase"
                   fromToken={tombFinance.VINYL}
@@ -81,8 +90,8 @@ const Pit: React.FC = () => {
                       : getDisplayBalance(bondsPurchasable, 18, 4) + ' CD available for purchase'
                   }
                   onExchange={handleBuyBonds}
-                  // disabled={!bondStat || isBondRedeemable || bootstrapped}
-                  disabled={!bondStat || isBondRedeemable}
+                  disabled={!bondStat || isBondRedeemable || bootstrapped}
+                  // disabled={!bondStat || isBondRedeemable}
                 />
               </StyledCardWrapper>
               <StyledStatsWrapper>
