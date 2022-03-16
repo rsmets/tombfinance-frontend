@@ -221,8 +221,9 @@ export class TombFinance {
 
   async getBondsPurchasable(): Promise<BigNumber> {
     const { Treasury } = this.contracts;
-    // return Treasury.getBurnableTombLeft(); // Unclear why this number appears so low
-    return Treasury.epochSupplyContractionLeft(); // this is really what is used to determine wether bonds can be purchased ot not
+    // RJS bonds purchaseable here
+    return Treasury.getBurnableTombLeft(); // Unclear why this number appears so low
+    // return Treasury.epochSupplyContractionLeft(); // this is really what is used to determine wether bonds can be purchased ot not
   }
 
   /**
