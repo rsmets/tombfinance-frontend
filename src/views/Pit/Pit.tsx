@@ -81,7 +81,8 @@ const Pit: React.FC = () => {
                       : getDisplayBalance(bondsPurchasable, 18, 4) + ' CD available for purchase'
                   }
                   onExchange={handleBuyBonds}
-                  disabled={!bondStat || isBondRedeemable || bootstrapped}
+                  // disabled={!bondStat || isBondRedeemable || bootstrapped}
+                  disabled={!bondStat || isBondRedeemable}
                 />
               </StyledCardWrapper>
               <StyledStatsWrapper>
