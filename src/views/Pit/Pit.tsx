@@ -56,6 +56,7 @@ const Pit: React.FC = () => {
   );
   const isBondRedeemable = useMemo(() => cashPrice.gt(BOND_REDEEM_PRICE_BN), [cashPrice]);
   const isBondPurchasable = useMemo(() => Number(bondStat?.tokenInFtm) < 1.01, [bondStat]);
+  const bootstrapped = true;
 
   return (
     <Switch>
@@ -80,7 +81,7 @@ const Pit: React.FC = () => {
                       : getDisplayBalance(bondsPurchasable, 18, 4) + ' CD available for purchase'
                   }
                   onExchange={handleBuyBonds}
-                  disabled={!bondStat || isBondRedeemable}
+                  disabled={!bondStat || isBondRedeemable || bootstrapped}
                 />
               </StyledCardWrapper>
               <StyledStatsWrapper>
