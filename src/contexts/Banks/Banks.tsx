@@ -13,6 +13,7 @@ const Banks: React.FC = ({ children }) => {
     const banks: Bank[] = [];
 
     for (const bankInfo of Object.values(bankDefinitions)) {
+      debugger;
       if (bankInfo.finished) {
         if (!tombFinance.isUnlocked) continue;
 
