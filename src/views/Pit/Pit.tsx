@@ -57,7 +57,7 @@ const Pit: React.FC = () => {
   );
   const isBondRedeemable = useMemo(() => cashPrice.gt(BOND_REDEEM_PRICE_BN), [cashPrice]);
   const isBondPurchasable = useMemo(() => Number(bondStat?.tokenInFtm) < 1.01, [bondStat]);
-  const bootstrapped = true;
+  const bootstrapped = false;
 
   return (
     <Switch>
@@ -67,9 +67,9 @@ const Pit: React.FC = () => {
           <>
             <Route exact path={path}>
               <PageHeader icon={'🏦'} title="Buy & Redeem CDs, aka Bonds" subtitle="Earn premiums upon redemption" />
-              <Alert variant="filled" severity="warning">
-              Bonds are not purchasable during first 18 epochs of treasury bootstrap expansion.
-                </Alert>
+              {/* <Alert variant="filled" severity="warning">
+              Bonds are not purchasable during first 12 epochs of treasury bootstrap expansion.
+                </Alert> */}
             </Route>
             <StyledBond>
               <StyledCardWrapper>
