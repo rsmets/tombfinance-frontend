@@ -9,6 +9,7 @@ import tBondLogo from '../../assets/img/crypto_tomb_bond.svg';
 
 import tombFtmLpLogo from '../../assets/img/tomb_ftm_lp.png';
 import tshareFtmLpLogo from '../../assets/img/tshare_ftm_lp.png';
+import tombTShareLpLogo from '../../assets/img/vinyl-tracks-lp-2.png';
 
 import wftmLogo from '../../assets/img/ftm_logo_blue.svg';
 import booLogo from '../../assets/img/spooky.png';
@@ -38,6 +39,7 @@ const logosBySymbol: { [title: string]: string } = {
   ZOO: zooLogo,
   'VINYL-FTM-LP': tombFtmLpLogo,
   'TRACKS-FTM-LP': tshareFtmLpLogo,
+  'VINYL-TRACKS-LP': tombTShareLpLogo,
   "2OMB": _2ombLogo, //2OMB
   USDC: usdcLogo,
 };

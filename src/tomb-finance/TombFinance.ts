@@ -191,6 +191,7 @@ export class TombFinance {
     const priceOfOneFTM = await this.getWFTMPriceFromPancakeswap();
     const priceOfSharesInDollars = (Number(priceInFTM) * Number(priceOfOneFTM)).toFixed(2);
 
+    debugger;
     return {
       tokenInFtm: priceInFTM,
       priceInDollars: priceOfSharesInDollars,
@@ -314,12 +315,15 @@ export class TombFinance {
       return await poolContract.epochTombPerSecond(0);
     }
     const rewardPerSecond = await (poolContract as any).tSharePerSecond();
+    if (depositTokenName === 'VINYL-TRACKS-LP') {
+      return rewardPerSecond.mul(1000).div(3000);
+    }
     if (depositTokenName.startsWith('VINYL')) {
-      return rewardPerSecond.mul(1100).div(2000);
+      return rewardPerSecond.mul(1100).div(3000);
       // return rewardPerSecond.mul(35500).div(59500);
       // return rewardPerSecond.div(2);
     } else {
-      return rewardPerSecond.mul(900).div(2000);
+      return rewardPerSecond.mul(900).div(3000);
       // return rewardPerSecond.mul(24000).div(59500);
       // return rewardPerSecond.div(2);
     }
@@ -342,6 +346,8 @@ export class TombFinance {
       if (tokenName === 'VINYL-FTM-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.VINYL, true);
       } else if (tokenName === 'TRACKS-FTM-LP') {
+        tokenPrice = await this.getLPTokenPrice(token, this.TRACKS, false);
+      } else if (tokenName === 'VINYL-TRACKS-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TRACKS, false);
       } else if (tokenName === 'SHIBA') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);
