@@ -177,7 +177,7 @@ const Home = () => {
               </p>
               <p>
               All token contracts are&nbsp;
-                <a href="https://vinyl-finance.github.io/vinylfinance-docs/docs/protocol-info/contracts" target="_blank" className={classes.link}
+                <a href="https://vinyl-finance.github.io/vinylfinance-docs/docs/security/renounced" target="_blank" className={classes.link}
                 >
                    renounced!
                 </a>
