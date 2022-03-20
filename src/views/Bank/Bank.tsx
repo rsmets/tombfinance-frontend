@@ -112,8 +112,10 @@ const LPTokenHelpText: React.FC<{ bank: BankEntity }> = ({ bank }) => {
 
   let pairName: string;
   let uniswapUrl: string;
-  // if (bank.depositTokenName.includes('VINYL')) {
-  if (bank.depositTokenName.includes('VINYL')) {
+  if (bank.depositTokenName === 'VINYL-TRACKS-LP') {
+    pairName = 'VINYL-TRACKS pair';
+    uniswapUrl = `https://spookyswap.finance/add/${tombAddr}/${tshareAddr}`;
+  } else if (bank.depositTokenName.includes('VINYL')) {
     pairName = 'VINYL-FTM pair';
     uniswapUrl = 'https://spookyswap.finance/add/FTM/' + tombAddr;
   } else {
