@@ -316,14 +316,14 @@ export class TombFinance {
     }
     const rewardPerSecond = await (poolContract as any).tSharePerSecond();
     if (depositTokenName === 'VINYL-TRACKS-LP') {
-      return rewardPerSecond.mul(10).div(2010);
+      return rewardPerSecond.mul(200).div(2200);
     }
     if (depositTokenName.startsWith('VINYL')) {
-      return rewardPerSecond.mul(1100).div(2000);
+      return rewardPerSecond.mul(1100).div(2200);
       // return rewardPerSecond.mul(35500).div(59500);
       // return rewardPerSecond.div(2);
     } else {
-      return rewardPerSecond.mul(900).div(2000);
+      return rewardPerSecond.mul(900).div(2200);
       // return rewardPerSecond.mul(24000).div(59500);
       // return rewardPerSecond.div(2);
     }

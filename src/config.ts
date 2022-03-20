@@ -267,7 +267,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     sort: 6,
     closedForStaking: !tshareRewardsRunning,
     // closedForStaking: false
-    multi: '55%',
+    multi: '50%',
   },
   TracksFtmLPTracksRewardPool: {
     name: 'Earn TRACKS by TRACKS-FTM LP',
@@ -281,7 +281,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     sort: 7,
     closedForStaking: !tshareRewardsRunning,
     // closedForStaking: false
-    multi: '45%',
+    multi: '41%',
   },
   VinylTracksLPTracksRewardPool: {
     name: 'Earn TRACKS with VINYL-TRACKS LP',
@@ -291,11 +291,11 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     // depositTokenName: 'TSHARE-FTM-LP',
     depositTokenName: 'VINYL-TRACKS-LP',
     earnTokenName: 'TRACKS',
-    finished: true,
+    finished: false,
     sort: 8,
     closedForStaking: false, // !tshareRewardsRunning,
     // closedForStaking: false
-    multi: '1%',
+    multi: '9%',
   },
   // VinylTracksRewardPool: {
   //   name: 'Earn TRACKS with VINYL',
