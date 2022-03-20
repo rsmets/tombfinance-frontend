@@ -190,6 +190,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: true,
     // closedForStaking: false
     aprZero: true,
+    multi: '0'
   },
   TombBooRewardPool: {
     name: 'Earn VINYL by 2OMB',
@@ -203,6 +204,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     // closedForStaking: !isGenRunning,
     closedForStaking: true,
     aprZero: true,
+    multi: '0',
   },
   TombShibaRewardPool: {
     name: 'Earn VINYL by USDC',
@@ -216,6 +218,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     // closedForStaking: !isGenRunning,
     closedForStaking: true,
     aprZero: true,
+    multi: '0',
   },
   // TombZooRewardPool: {
   //   name: 'Earn VINYL by ZOO',
@@ -240,6 +243,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: true,
     aprZero: true,
     // closedForStaking: false
+    multi: '0',
   },
   // TombFtmLPTombRewardPoolOld: {
   //   name: 'Earn VINYL by VINYL-FTM LP',
@@ -263,6 +267,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     sort: 6,
     closedForStaking: !tshareRewardsRunning,
     // closedForStaking: false
+    multi: '55%',
   },
   TracksFtmLPTracksRewardPool: {
     name: 'Earn TRACKS by TRACKS-FTM LP',
@@ -276,6 +281,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     sort: 7,
     closedForStaking: !tshareRewardsRunning,
     // closedForStaking: false
+    multi: '45%',
   },
   VinylTracksLPTracksRewardPool: {
     name: 'Earn TRACKS with VINYL-TRACKS LP',
@@ -285,10 +291,11 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     // depositTokenName: 'TSHARE-FTM-LP',
     depositTokenName: 'VINYL-TRACKS-LP',
     earnTokenName: 'TRACKS',
-    finished: false,
+    finished: true,
     sort: 8,
-    closedForStaking: false // !tshareRewardsRunning,
+    closedForStaking: false, // !tshareRewardsRunning,
     // closedForStaking: false
+    multi: '1%',
   },
   // VinylTracksRewardPool: {
   //   name: 'Earn TRACKS with VINYL',

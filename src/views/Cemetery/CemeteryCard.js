@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Button, Card, CardActions, CardContent, Typography, Grid } from '@material-ui/core';
+import useStatsForPool from '../../hooks/useStatsForPool';
 
 import TokenSymbol from '../../components/TokenSymbol';
 
 const CemeteryCard = ({ bank }) => {
+  // const bankid = useBank(bank.id);
+  const statsOnPool = useStatsForPool(bank);
+
   return (
     <Grid item xs={12} md={4} lg={4}>
       <Card variant="outlined">
@@ -32,6 +36,14 @@ const CemeteryCard = ({ bank }) => {
             <Typography color="textSecondary">
               {/* {bank.name} */}
               Deposit {bank.depositTokenName.toUpperCase()} Earn {` ${bank.earnTokenName}`}
+            </Typography>
+            <Typography color="#322f32">
+              {/* {bank.name} */}
+              <b>Daily APR:</b> {bank.closedForStaking ? '0.00' : statsOnPool?.dailyAPR}%
+            </Typography>
+            <Typography color="#322f32">
+              {/* {bank.name} */}
+              {bank.depositTokenName == 'HSHARE-WINE-LP'? <span style={{color: 'rgba(0,0,0,0)'}}>a</span> : <span>Pool Weighting: {bank.multi}</span>}
             </Typography>
           </Box>
         </CardContent>
