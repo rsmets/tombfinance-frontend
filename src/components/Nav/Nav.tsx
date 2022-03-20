@@ -143,6 +143,9 @@ const Nav = () => {
               <Link color="textPrimary" to="/regulations" className={classes.link}>
                 Regulations
               </Link> */}
+              <a href="https://vinyl-finance.github.io/vinylfinance-docs/docs/guides/profit-strategies" target="_blank" className={classes.link}>
+                Strategies
+              </a>
               <a href="https://vinyl-finance.github.io/vinylfinance-docs/docs/welcome" target="_blank" className={classes.link}>
                 Docs
               </a>
