@@ -88,7 +88,7 @@ const Cemetery = () => {
                         VINYL Reward Pool has ended please remove your staked VINYL/FTM LP and move into the TRACKS Reward Pool.
                       </Alert> : ''
                   } */}
-                  <Grid container spacing={3}>
+                  {/* <Grid container spacing={3}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 1)
                       .map((bank) => (
@@ -96,7 +96,7 @@ const Cemetery = () => {
                           <CemeteryCard bank={bank} />
                         </React.Fragment>
                       ))}
-                  </Grid>
+                  </Grid> */}
                 </div>
 
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
@@ -104,8 +104,8 @@ const Cemetery = () => {
                   Genesis Pools (1% deposit fee)
                   
                     {/* <h6>ends in <Countdown date={genFinishedTime*1000} /></h6> */}
-                    <h6>This reward pool has ended.</h6>
                     {/* <h6>ends in <Countdown date={(genFinishedTime)*1000} /></h6> */}
+                    <h6>This reward pool has ended.</h6>
                   </Typography>
                   {/* {isGenFinished ? 
                       <Alert variant="filled" severity="warning">
@@ -113,7 +113,7 @@ const Cemetery = () => {
                       </Alert> : ''
                       // 'This reward pool has ended.' :``
                   } */}
-                  <Grid container spacing={3}>
+                  {/* <Grid container spacing={3}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 0)
                       .map((bank) => (
@@ -121,7 +121,7 @@ const Cemetery = () => {
                           <CemeteryCard bank={bank} />
                         </React.Fragment>
                       ))}
-                  </Grid>
+                  </Grid> */}
                 </div>
               </Box>
             </Container>
